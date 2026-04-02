@@ -10,7 +10,7 @@ function Divider() {
   );
 }
 
-function CTAButton({ className = "", text = "Download Now" }: { className?: string, text?: string }) {
+function CTAButton({ className = "", text = "Descargar Ahora" }: { className?: string, text?: string }) {
   return (
     <a
       href="#"
@@ -54,43 +54,43 @@ function SectionHeading({
 const phases = [
   {
     number: "01",
-    title: "Identity Reset",
+    title: "Reinicio de Identidad",
     description:
-      "Define who you are becoming. Shift from your past version into your future self.",
+      "Define en quién te estás convirtiendo. Cambia de tu versión pasada a tu yo futuro.",
   },
   {
     number: "02",
-    title: "Inner Work & Healing",
+    title: "Trabajo Interior y Sanación",
     description:
-      "Understand your triggers. Release emotional patterns. Heal the wounds that shape your reactions.",
+      "Entiende tus detonantes. Libera patrones emocionales. Sana las heridas que moldean tus reacciones.",
   },
   {
     number: "03",
-    title: "Self-Worth & Standards",
+    title: "Autovalor y Estándares",
     description:
-      "Build deep self-love. Set non-negotiable standards. Stop accepting less.",
+      "Construye un amor propio profundo. Establece estándares no negociables. Deja de aceptar menos.",
   },
   {
     number: "04",
-    title: "Discipline & Power",
+    title: "Disciplina y Poder",
     description:
-      "Create habits that align with your highest self. Do what needs to be done — even when it's uncomfortable.",
+      "Crea hábitos que se alineen con tu yo más elevado. Haz lo que debe hacerse — incluso cuando sea incómodo.",
   },
   {
     number: "05",
-    title: "Magnetic Expression",
+    title: "Expresión Magnética",
     description:
-      "Become the woman people feel. Move with confidence, presence, and certainty.",
+      "Conviértete en la mujer que la gente siente. Muévete con confianza, presencia y certeza.",
   },
 ];
 
-export default function Home() {
+export default function HomeES() {
   return (
     <main>
       <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-12 py-8">
         <div className="font-serif text-xl sm:text-2xl text-cream italic tracking-wide">Sandra Torres</div>
         <div className="flex items-center gap-6 font-sans text-sm font-semibold tracking-[0.2em] uppercase text-cream">
-          <Link href="/es" className="text-cream/60 hover:text-cream transition-colors">ES</Link>
+          <Link href="/" className="text-cream/60 hover:text-cream transition-colors">EN</Link>
         </div>
       </header>
 
@@ -108,7 +108,7 @@ export default function Home() {
 
         <div className="relative z-10 flex flex-col items-center text-center px-6 py-24 max-w-4xl mx-auto mt-12">
           <p className="animate-fade-in-up text-blush/90 text-xs sm:text-sm uppercase tracking-[0.35em] font-sans font-medium mb-8">
-            A Proven Method by Sandra Torres
+            Un Método Probado por Sandra Torres
           </p>
 
           <h1 className="animate-fade-in-up animate-delay-100 font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-medium text-cream leading-[0.95] tracking-tight mb-8 drop-shadow-lg">
@@ -123,9 +123,9 @@ export default function Home() {
 
           <div className="animate-fade-in-up animate-delay-200 space-y-3 mb-12">
             <p className="text-cream/90 font-sans text-lg sm:text-2xl leading-relaxed max-w-2xl font-light">
-              You don&apos;t become her overnight.
+              No te conviertes en ella de la noche a la mañana.
               <br />
-              You become her through daily choices.
+              Te conviertes en ella a través de elecciones diarias.
             </p>
           </div>
 
@@ -139,12 +139,12 @@ export default function Home() {
       <section className="bg-cream py-24 sm:py-32">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <div className="space-y-8 text-charcoal/80 font-sans text-lg sm:text-xl leading-relaxed">
-            <p className="tracking-wide">Every action builds your identity.<br/>Every decision shapes your future.</p>
+            <p className="tracking-wide">Cada acción construye tu identidad.<br/>Cada decisión moldea tu futuro.</p>
             <Divider />
             <p className="text-burgundy font-serif text-3xl sm:text-4xl lg:text-5xl italic leading-tight font-medium mt-8">
-              You don&apos;t chase the life you want&hellip;
+              No persigues la vida que quieres&hellip;
               <br />
-              <span className="text-rose">You become the woman who attracts it.</span>
+              <span className="text-rose">Te conviertes en la mujer que la atrae.</span>
             </p>
           </div>
         </div>
@@ -154,14 +154,14 @@ export default function Home() {
       <section className="bg-ivory py-24 sm:py-32">
         <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-1/2">
-            <SectionHeading>This Is For You If&hellip;</SectionHeading>
+            <SectionHeading>Esto Es Para Ti Si&hellip;</SectionHeading>
 
             <ul className="mt-12 space-y-8">
               {[
-                "You feel like you have so much potential… but you're not fully living it.",
-                "You're tired of overthinking, doubting yourself, and settling for less than you deserve.",
-                "You want to feel confident, powerful, clear, and in control of your life.",
-                "You want to become that woman — the one who walks into a room and is felt.",
+                "Sientes que tienes mucho potencial... pero no lo estás viviendo plenamente.",
+                "Estás cansada de pensar demasiado, de dudar de ti misma y de conformarte con menos de lo que mereces.",
+                "Quieres sentirte segura, poderosa, con claridad y en control de tu vida.",
+                "Quieres convertirte en esa mujer — la que entra en una habitación y se hace sentir.",
               ].map((text, i) => (
                 <li key={i} className="flex gap-5 items-start">
                   <span className="mt-2.5 block w-1.5 h-1.5 rounded-full bg-rose shrink-0" />
@@ -182,26 +182,25 @@ export default function Home() {
       <section className="bg-cream py-24 sm:py-32">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <SectionHeading>
-            This Is Not Just an Ebook.
+            Esto No Es Solo un Ebook.
           </SectionHeading>
 
           <p className="mt-6 font-serif text-2xl sm:text-3xl italic text-burgundy/80 leading-relaxed">
-            This is a shift in identity.
+            Esto es un cambio de identidad.
           </p>
 
           <p className="mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light max-w-2xl mx-auto">
-            The Becoming Her Method™ is a step-by-step guide designed to help
-            you:
+            El Método Becoming Her™ es una guía paso a paso diseñada para ayudarte a:
           </p>
 
           <div className="mt-12 bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-blush/20 text-left">
             <ul className="space-y-6">
               {[
-                "Break emotional patterns that keep you stuck",
-                "Reprogram the beliefs that limit your growth",
-                "Build deep self-love and unshakable self-respect",
-                "Develop discipline and standards that elevate your life",
-                "Become magnetic without chasing validation",
+                "Romper patrones emocionales que te mantienen estancada",
+                "Reprogramar las creencias que limitan tu crecimiento",
+                "Construir un amor propio profundo y un respeto inquebrantable",
+                "Desarrollar disciplina y estándares que eleven tu vida",
+                "Volverte magnética sin perseguir validación",
               ].map((text, i) => (
                 <li key={i} className="flex gap-6 items-start">
                   <span className="text-rose/50 font-serif text-2xl mt-0.5">—</span>
@@ -215,7 +214,7 @@ export default function Home() {
 
           <div className="mt-16 max-w-2xl mx-auto">
             <p className="font-serif text-2xl sm:text-3xl text-burgundy leading-relaxed italic">
-              This is about becoming a woman who doesn&apos;t settle, doesn&apos;t chase, and doesn&apos;t lose herself.
+              Se trata de convertirte en una mujer que no se conforma, no persigue y no se pierde a sí misma.
             </p>
           </div>
         </div>
@@ -228,21 +227,21 @@ export default function Home() {
         <div className="absolute inset-0 bg-linear-to-b from-burgundy-deep/60 to-burgundy-deep/90" />
         
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <SectionHeading light>What You Will Experience</SectionHeading>
+          <SectionHeading light>Lo Que Experimentarás</SectionHeading>
 
           <div className="mt-16 space-y-12">
             {[
               {
-                from: "You will stop reacting…",
-                to: "and start responding with power.",
+                from: "Dejarás de reaccionar…",
+                to: "y empezarás a responder con poder.",
               },
               {
-                from: "You will stop seeking validation…",
-                to: "and start choosing yourself.",
+                from: "Dejarás de buscar validación…",
+                to: "y empezarás a elegirte a ti misma.",
               },
               {
-                from: "You will stop feeling lost…",
-                to: "and start moving with clarity.",
+                from: "Dejarás de sentirte perdida…",
+                to: "y empezarás a moverte con claridad.",
               },
             ].map((item, i) => (
               <div key={i} className="space-y-2">
@@ -259,9 +258,9 @@ export default function Home() {
           <div className="mt-20">
             <div className="w-24 h-px bg-rose/50 mx-auto mb-10" />
             <p className="font-serif text-2xl sm:text-3xl italic text-blush leading-relaxed">
-              This is where you stop being controlled by your emotions&hellip;
+              Aquí es donde dejas de ser controlada por tus emociones&hellip;
               <br />
-              and start using them as guidance.
+              y empiezas a usarlas como guía.
             </p>
           </div>
         </div>
@@ -272,9 +271,9 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-20">
             <p className="text-rose text-xs sm:text-sm uppercase tracking-[0.3em] font-sans font-bold mb-4">
-              The 5 Phases
+              Las 5 Fases
             </p>
-            <SectionHeading>The Method</SectionHeading>
+            <SectionHeading>El Método</SectionHeading>
           </div>
 
           <div className="space-y-8">
@@ -309,26 +308,26 @@ export default function Home() {
              <Image src="/sandy/IMG_4326.JPG" alt="Sandra Torres" fill className="object-cover object-center" />
           </div>
           <div className="w-full lg:w-1/2 lg:pl-10">
-            <SectionHeading>Why This Works</SectionHeading>
+            <SectionHeading>Por Qué Esto Funciona</SectionHeading>
 
             <p className="mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light">
-              Because it doesn&apos;t focus on surface-level motivation.
+              Porque no se enfoca en motivación superficial.
             </p>
 
             <p className="mt-6 font-serif text-3xl sm:text-4xl italic text-rose leading-snug font-medium">
-              It changes who you are being.
+              Cambia quién estás siendo.
             </p>
 
             <div className="mt-12 space-y-5 text-charcoal/60 font-sans text-xl font-light">
-              <p>When your identity shifts&hellip;</p>
+              <p>Cuando tu identidad cambia&hellip;</p>
               <p className="text-charcoal/70">
-                your standards shift.
+                tus estándares cambian.
               </p>
               <p className="text-charcoal/80">
-                your actions shift.
+                tus acciones cambian.
               </p>
               <p className="text-burgundy font-medium text-2xl pt-2">
-                your entire life shifts.
+                toda tu vida cambia.
               </p>
             </div>
           </div>
@@ -337,17 +336,17 @@ export default function Home() {
 
       {/* ── Imagine This Version of You ── */}
       <AnimatedImagineSection
-        heading="Imagine This Version of You"
+        heading="Imagina Esta Versión de Ti"
         lines={[
-          { text: "You walk into a room and you don't question yourself." },
-          { beforeHighlight: "You don't chase attention — ", highlight: "you attract it." },
-          { beforeHighlight: "You don't tolerate confusion — ", highlight: "you choose clarity." },
-          { beforeHighlight: "You don't abandon yourself — ", highlight: "you stand in your power." }
+          { text: "Entras en una habitación y no cuestionas tu valor." },
+          { beforeHighlight: "No persigues la atención — ", highlight: "la atraes." },
+          { beforeHighlight: "No toleras la confusión — ", highlight: "eliges la claridad." },
+          { beforeHighlight: "No te abandonas a ti misma — ", highlight: "te mantienes en tu poder." }
         ]}
         conclusion={
           <>
-            That version of you already exists.<br />
-            This method shows you how to become her.
+            Esa versión de ti ya existe.<br />
+            Este método te muestra cómo convertirte en ella.
           </>
         }
       />
@@ -356,24 +355,24 @@ export default function Home() {
       <section className="bg-ivory py-24 sm:py-32">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-20">
-            <SectionHeading>This Is Your Turning Point</SectionHeading>
+            <SectionHeading>Este Es Tu Punto de Inflexión</SectionHeading>
 
             <div className="mt-10 space-y-4 font-sans text-xl text-charcoal/70 leading-relaxed font-light">
-              <p>You can stay where you are&hellip;</p>
+              <p>Puedes quedarte donde estás&hellip;</p>
               <p className="text-burgundy font-medium text-2xl">
-                or you can decide that this is the moment everything changes.
+                o puedes decidir que este es el momento en que todo cambia.
               </p>
             </div>
 
             <div className="mt-16 flex flex-col items-center gap-4">
               <p className="font-sans text-charcoal/50 text-lg tracking-[0.2em] uppercase">
-                No more waiting.
+                No más esperas.
               </p>
               <p className="font-sans text-charcoal/60 text-lg tracking-[0.2em] uppercase">
-                No more settling.
+                No más conformismo.
               </p>
               <p className="font-sans text-burgundy/80 font-bold text-lg tracking-[0.2em] uppercase">
-                No more shrinking.
+                No más hacerte pequeña.
               </p>
             </div>
           </div>
@@ -393,15 +392,15 @@ export default function Home() {
 
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h2 className="font-serif text-5xl sm:text-6xl font-medium text-burgundy leading-[0.95] tracking-tight">
-                Become
+                Conviértete en
                 <br />
-                <span className="italic text-rose">Her.</span>
+                <span className="italic text-rose">Ella.</span>
               </h2>
 
               <p className="mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light">
-                Start your transformation now.
+                Comienza tu transformación ahora.
                 <br />
-                Access the Becoming Her Method™ today.
+                Accede al Método Becoming Her™ hoy.
               </p>
 
               <div className="mt-10">
@@ -417,15 +416,15 @@ export default function Home() {
         <div className="max-w-2xl mx-auto px-6 text-center">
           <p className="font-serif text-2xl text-cream italic mb-6">Sandra Torres</p>
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-cream/40 mb-8">
-            A Proven Method to Unlock Your Potential
+            Un Método Probado para Desbloquear Tu Potencial
           </p>
           <div className="flex justify-center gap-6 mb-8 text-cream/60 text-sm">
-            <Link href="/" className="text-cream hover:text-cream transition-colors">EN</Link>
+            <Link href="/" className="hover:text-cream transition-colors">EN</Link>
             <span>|</span>
-            <Link href="/es" className="hover:text-cream transition-colors">ES</Link>
+            <Link href="/es" className="text-cream hover:text-cream transition-colors">ES</Link>
           </div>
           <p className="font-sans text-[11px] text-cream/20">
-            &copy; {new Date().getFullYear()} Becoming Her Method™. All rights reserved.
+            &copy; {new Date().getFullYear()} Becoming Her Method™. Todos los derechos reservados.
           </p>
         </div>
       </footer>

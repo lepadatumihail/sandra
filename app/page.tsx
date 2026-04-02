@@ -16,26 +16,29 @@ function Divider() {
 
 function CTAButton({
   className = '',
-  text = "Yes, I'm Ready to Become Her",
+  text = "Get Free Feminine Cycle Decision System",
 }: {
   className?: string;
   text?: string;
 }) {
   return (
     <a
-      href='#'
+      href='/BECOMING%20HER%20(2).pdf'
+      download='Becoming_Her_Feminine_Cycle_Decision_System.pdf'
+      target='_blank'
+      rel='noopener noreferrer'
       className={`
         group relative inline-flex items-center justify-center
-        px-10 py-4 text-sm font-sans font-semibold uppercase tracking-[0.25em]
+        px-8 sm:px-10 py-4 text-xs sm:text-sm font-sans font-semibold uppercase tracking-[0.15em] sm:tracking-[0.2em]
         text-burgundy bg-cream shadow-lg
         transition-all duration-500 ease-out
-        hover:bg-white hover:tracking-[0.3em] hover:shadow-xl hover:-translate-y-0.5
+        hover:bg-white hover:shadow-xl hover:-translate-y-0.5
         focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream
         ${className}
       `}
     >
-      <span className='relative z-10'>{text}</span>
-      <span className='ml-3 relative z-10 transition-transform duration-300 group-hover:translate-x-1'>
+      <span className='relative z-10 text-center'>{text}</span>
+      <span className='ml-3 relative z-10 transition-transform duration-300 group-hover:translate-x-1 shrink-0'>
         &rarr;
       </span>
     </a>

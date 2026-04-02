@@ -31,7 +31,7 @@
   --font-sans: var(--font-outfit);
 }
 
-html {
+html[data-scroll-behavior="smooth"] {
   scroll-behavior: smooth;
 }
 

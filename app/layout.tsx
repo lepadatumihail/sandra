@@ -15,6 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://becominghermethod.com"),
   title: "Becoming Her Method™ — by Sandra Torres",
   description:
     "A proven step-by-step method to help you break emotional patterns, build deep self-love, and become the most powerful version of yourself.",
@@ -35,6 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${playfair.variable} ${outfit.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

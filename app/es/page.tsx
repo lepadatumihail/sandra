@@ -135,6 +135,43 @@ export default function HomeES() {
         </div>
       </section>
 
+      {/* ── Early CTA ── */}
+      <section className="bg-cream py-20 sm:py-28">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 bg-white p-8 sm:p-12 lg:p-16 rounded-3xl shadow-xl border border-blush/20">
+            <div className="w-full md:w-1/2 flex justify-center">
+              <div className="relative w-full max-w-[420px] aspect-3/4 shadow-2xl rounded-sm overflow-hidden">
+                <Image
+                  src="/branding/becoming-her-cover.png"
+                  alt="Becoming Her Method™ — portada del curso"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 420px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              <h2 className="font-serif text-5xl sm:text-6xl font-medium text-burgundy leading-[0.95] tracking-tight">
+                Conviértete en
+                <br />
+                <span className="italic text-rose">Ella.</span>
+              </h2>
+
+              <p className="mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light">
+                Comienza tu transformación ahora.
+                <br />
+                Accede al Método Becoming Her™ hoy.
+              </p>
+
+              <div className="mt-10">
+                <CTAButton />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Opening Manifesto ── */}
       <section className="bg-cream py-24 sm:py-32">
         <div className="max-w-3xl mx-auto px-6 text-center">
@@ -173,7 +210,7 @@ export default function HomeES() {
             </ul>
           </div>
           <div className="w-full lg:w-1/2 relative h-[500px] sm:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
-            <Image src="/sandy/IMG_4324.jpg" alt="Sandra Torres" fill className="object-cover object-center hover:scale-105 transition-transform duration-1000" />
+            <Image src="/sandy/IMG_4324.jpg" alt="Sandra Torres" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-center hover:scale-105 transition-transform duration-1000" />
           </div>
         </div>
       </section>
@@ -222,7 +259,7 @@ export default function HomeES() {
 
       {/* ── What You Will Experience (Parallax image) ── */}
       <section className="relative py-32 sm:py-48 overflow-hidden">
-        <Image src="/sandy/IMG_4337.jpg" alt="Background" fill className="object-cover object-center" />
+        <Image src="/sandy/IMG_4337.jpg" alt="Background" fill sizes="100vw" className="object-cover object-center" />
         <div className="absolute inset-0 bg-burgundy/80 mix-blend-multiply" />
         <div className="absolute inset-0 bg-linear-to-b from-burgundy-deep/60 to-burgundy-deep/90" />
         
@@ -305,7 +342,7 @@ export default function HomeES() {
       <section className="bg-cream py-24 sm:py-32">
         <div className="max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-1/2 relative h-[500px] sm:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
-             <Image src="/sandy/IMG_4326.JPG" alt="Sandra Torres" fill className="object-cover object-center" />
+             <Image src="/sandy/IMG_4326.JPG" alt="Sandra Torres" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-center" />
           </div>
           <div className="w-full lg:w-1/2 lg:pl-10">
             <SectionHeading>Por Qué Esto Funciona</SectionHeading>
@@ -379,12 +416,12 @@ export default function HomeES() {
 
           <div className="mt-32 flex flex-col md:flex-row items-center gap-12 md:gap-20 bg-white p-8 sm:p-12 lg:p-16 rounded-3xl shadow-xl border border-blush/20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <div className="relative w-full max-w-[320px] aspect-3/4 shadow-2xl rounded-sm overflow-hidden">
+              <div className="relative w-full max-w-[420px] aspect-3/4 shadow-2xl rounded-sm overflow-hidden">
                 <Image
                   src="/branding/becoming-her-cover.png"
                   alt="Becoming Her Method™ — course cover"
                   fill
-                  sizes="(max-width: 768px) 280px, 320px"
+                  sizes="(max-width: 768px) 90vw, 420px"
                   className="object-cover"
                 />
               </div>

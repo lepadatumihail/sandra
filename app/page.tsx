@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedImagineSection } from '@/components/AnimatedImagineSection';
+import { Polaroid } from '@/components/Polaroid';
+import { Testimonials } from '@/components/Testimonials';
+import { FAQ } from '@/components/FAQ';
+import { StickyMobileCTA } from '@/components/StickyMobileCTA';
 
 function Divider() {
   return (
@@ -12,7 +16,7 @@ function Divider() {
 
 function CTAButton({
   className = '',
-  text = 'Download Now',
+  text = "Yes, I'm Ready to Become Her",
 }: {
   className?: string;
   text?: string;
@@ -117,7 +121,9 @@ export default function Home() {
           sizes='100vw'
           className='object-cover object-center'
         />
-        <div className='absolute inset-0 bg-linear-to-b from-burgundy/80 via-burgundy/50 to-burgundy-deep/95' />
+        <div className='absolute inset-0 bg-linear-to-b from-burgundy/70 via-rose/30 to-burgundy-deep/95 mix-blend-multiply' />
+        <div className='absolute top-1/4 -left-1/4 w-96 h-96 bg-blush/30 rounded-full blur-[120px] mix-blend-screen animate-pulse pointer-events-none' />
+        <div className='absolute bottom-1/4 -right-1/4 w-[30rem] h-[30rem] bg-rose/20 rounded-full blur-[120px] mix-blend-screen animate-pulse animate-delay-300 pointer-events-none' />
 
         <div className='relative z-10 flex flex-col items-center text-center px-6 py-24 max-w-4xl mx-auto mt-12'>
           <p className='animate-fade-in-up text-blush/90 text-xs sm:text-sm uppercase tracking-[0.35em] font-sans font-medium mb-8'>
@@ -142,22 +148,36 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='animate-fade-in-up animate-delay-300'>
+          <div className='animate-fade-in-up animate-delay-300 flex flex-col items-center'>
             <CTAButton />
+            <div className='mt-6 flex flex-col items-center gap-2'>
+              <div className='flex gap-1 text-blush'>
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className='w-4 h-4 fill-current'
+                    viewBox='0 0 20 20'
+                  >
+                    <path d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z' />
+                  </svg>
+                ))}
+              </div>
+              <p className='text-cream/80 text-xs sm:text-sm font-sans font-light tracking-wider uppercase'>
+                Join 500+ women transforming their lives
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Opening Manifesto ── */}
-      <section className='bg-cream py-24 sm:py-32'>
-        <div className='max-w-3xl mx-auto px-6 text-center'>
+      <section className='bg-cream py-20 sm:py-32 relative overflow-hidden'>
+        {/* Dreamy glows */}
+        <div className='absolute top-0 right-0 w-[40rem] h-[40rem] bg-rose/10 rounded-full blur-[100px] mix-blend-multiply pointer-events-none' />
+        <div className='absolute bottom-0 left-0 w-[40rem] h-[40rem] bg-blush/15 rounded-full blur-[100px] mix-blend-multiply pointer-events-none' />
+
+        <div className='relative z-10 max-w-3xl mx-auto px-6 text-center'>
           <div className='space-y-8 text-charcoal/80 font-sans text-lg sm:text-xl leading-relaxed'>
-            <p className='tracking-wide'>
-              Every action builds your identity.
-              <br />
-              Every decision shapes your future.
-            </p>
-            <Divider />
             <p className='text-burgundy font-serif text-3xl sm:text-4xl lg:text-5xl italic leading-tight font-medium mt-8'>
               You don&apos;t chase the life you want&hellip;
               <br />
@@ -191,34 +211,66 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[700px] rounded-2xl overflow-hidden shadow-2xl'>
-            <Image
-              src='/sandy/IMG_4324.jpg'
-              alt='Sandra Torres'
-              fill
-              sizes='(max-width: 1024px) 100vw, 50vw'
-              className='object-cover object-center hover:scale-105 transition-transform duration-1000'
-            />
+          <div className='w-full lg:w-1/2 flex justify-center relative'>
+            {/* Dreamy glow behind polaroid */}
+            <div className='absolute inset-0 bg-rose/20 rounded-full blur-[100px] mix-blend-multiply' />
+            <div className='w-full max-w-[400px] relative z-10'>
+              <Polaroid
+                src='/sandy/IMG_4324.jpg'
+                alt='Sandra Torres'
+                caption='Your new reality...'
+                rotation='left'
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Not Just An Ebook ── */}
-      <section className='bg-cream py-24 sm:py-32'>
-        <div className='max-w-4xl mx-auto px-6 text-center'>
-          <SectionHeading>This Is Not Just an Ebook.</SectionHeading>
+      <section className='bg-cream py-24 sm:py-32 relative overflow-hidden'>
+        <div className='max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center'>
+          
+          <div className='w-full lg:w-1/2 relative'>
+            {/* Background glow */}
+            <div className='absolute inset-0 bg-rose/10 rounded-full blur-[80px] mix-blend-multiply' />
+            
+            <div className='relative w-full max-w-[420px] mx-auto aspect-[3/4] shadow-2xl rounded-sm overflow-hidden border border-cream-dark z-10 hover:scale-[1.02] transition-transform duration-700'>
+              <Image
+                src='/branding/becoming-her-cover.png'
+                alt='Becoming Her Method™ — course cover'
+                fill
+                sizes='(max-width: 768px) 90vw, 420px'
+                className='object-cover'
+              />
+            </div>
+            
+            {/* Handwritten annotations */}
+            <div className='absolute -right-8 top-1/4 hidden md:flex flex-col items-start rotate-[6deg] z-20'>
+              <span className='font-handwriting text-3xl text-burgundy/80'>Your identity reset</span>
+              <svg className='w-12 h-12 text-rose/60 ml-4 mt-1 -rotate-45' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='1.5' d='M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6' />
+              </svg>
+            </div>
+            
+            <div className='absolute -left-12 bottom-1/4 hidden md:flex flex-col items-end rotate-[-4deg] z-20'>
+              <span className='font-handwriting text-3xl text-burgundy/80'>Step-by-step framework</span>
+              <svg className='w-12 h-12 text-rose/60 mr-4 mt-1 rotate-[135deg] transform scale-x-[-1]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='1.5' d='M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6' />
+              </svg>
+            </div>
+          </div>
 
-          <p className='mt-6 font-serif text-2xl sm:text-3xl italic text-burgundy/80 leading-relaxed'>
-            This is a shift in identity.
-          </p>
+          <div className='w-full lg:w-1/2'>
+            <SectionHeading>This Is Not Just an Ebook.</SectionHeading>
+            <p className='mt-4 font-handwriting text-3xl sm:text-4xl text-rose tracking-wider rotate-[-1deg]'>
+              This is a shift in identity.
+            </p>
 
-          <p className='mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light max-w-2xl mx-auto'>
-            The Becoming Her Method™ is a step-by-step guide designed to help
-            you:
-          </p>
+            <p className='mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light'>
+              The Becoming Her Method™ is a step-by-step guide designed to help you:
+            </p>
 
-          <div className='mt-12 bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-blush/20 text-left'>
-            <ul className='space-y-6'>
+            <div className='mt-10 space-y-6'>
               {[
                 'Break emotional patterns that keep you stuck',
                 'Reprogram the beliefs that limit your growth',
@@ -226,24 +278,23 @@ export default function Home() {
                 'Develop discipline and standards that elevate your life',
                 'Become magnetic without chasing validation',
               ].map((text, i) => (
-                <li key={i} className='flex gap-6 items-start'>
-                  <span className='text-rose/50 font-serif text-2xl mt-0.5'>
-                    —
-                  </span>
+                <div key={i} className='flex gap-5 items-start'>
+                  <span className='mt-1.5 font-handwriting text-3xl text-rose/60 shrink-0'>*</span>
                   <p className='font-sans text-charcoal/80 text-lg sm:text-xl leading-relaxed font-light'>
                     {text}
                   </p>
-                </li>
+                </div>
               ))}
-            </ul>
-          </div>
+            </div>
 
-          <div className='mt-16 max-w-2xl mx-auto'>
-            <p className='font-serif text-2xl sm:text-3xl text-burgundy leading-relaxed italic'>
-              This is about becoming a woman who doesn&apos;t settle,
-              doesn&apos;t chase, and doesn&apos;t lose herself.
-            </p>
+            <div className='mt-12 p-8 bg-white rounded-2xl shadow-sm border border-blush/20'>
+              <p className='font-serif text-2xl sm:text-3xl text-burgundy leading-relaxed italic'>
+                This is about becoming a woman who doesn&apos;t settle,
+                doesn&apos;t chase, and doesn&apos;t lose herself.
+              </p>
+            </div>
           </div>
+          
         </div>
       </section>
 
@@ -336,14 +387,16 @@ export default function Home() {
       {/* ── Why This Works ── */}
       <section className='bg-cream py-24 sm:py-32'>
         <div className='max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center'>
-          <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[700px] rounded-2xl overflow-hidden shadow-2xl'>
-            <Image
-              src='/sandy/IMG_4326.JPG'
-              alt='Sandra Torres'
-              fill
-              sizes='(max-width: 1024px) 100vw, 50vw'
-              className='object-cover object-center'
-            />
+          <div className='w-full lg:w-1/2 flex justify-center relative'>
+            <div className='absolute inset-0 bg-blush/20 rounded-full blur-[100px] mix-blend-multiply' />
+            <div className='w-full max-w-[400px] relative z-10'>
+              <Polaroid
+                src='/sandy/IMG_4326.JPG'
+                alt='Sandra Torres'
+                caption='You become her.'
+                rotation='right'
+              />
+            </div>
           </div>
           <div className='w-full lg:w-1/2 lg:pl-10'>
             <SectionHeading>Why This Works</SectionHeading>
@@ -367,6 +420,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Testimonials ── */}
+      <Testimonials />
 
       {/* ── Imagine This Version of You ── */}
       <AnimatedImagineSection
@@ -455,6 +511,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FAQ ── */}
+      <FAQ />
+
       {/* ── Footer ── */}
       <footer className='bg-burgundy-deep py-12'>
         <div className='max-w-2xl mx-auto px-6 text-center'>
@@ -482,6 +541,8 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      <StickyMobileCTA />
     </main>
   );
 }

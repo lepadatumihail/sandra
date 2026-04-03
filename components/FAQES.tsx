@@ -2,29 +2,29 @@
 
 import { useState } from 'react';
 
-export function FAQ() {
+export function FAQES() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
-      question: 'Is this just another generic self-help book?',
+      question: '¿Es esto solo otro libro genérico de autoayuda?',
       answer:
-        'No. Generic self-help tells you to think positive. The Becoming Her Method™ forces you to dismantle the subconscious patterns that are keeping you stuck, so you can naturally embody a new identity.',
+        'No. La autoayuda genérica te dice que pienses positivo. El Becoming Her Method™ te obliga a desmantelar los patrones subconscientes que te mantienen estancada, para que puedas encarnar naturalmente una nueva identidad.',
     },
     {
-      question: 'How is this method different from therapy?',
+      question: '¿En qué se diferencia este método de la terapia?',
       answer:
-        'While therapy is often focused on understanding your past, this method is focused on actively building your future. It gives you an actionable, step-by-step framework to shift your reality right now.',
+        'Mientras que la terapia a menudo se enfoca en entender tu pasado, este método se enfoca en construir activamente tu futuro. Te da un marco de acción paso a paso para cambiar tu realidad ahora mismo.',
     },
     {
-      question: 'How long does it take to see a shift in my reality?',
+      question: '¿Cuánto tiempo toma ver un cambio en mi realidad?',
       answer:
-        'The shift begins the moment you make the decision to no longer tolerate your current reality. Many women experience a profound internal shift within the first week of applying the framework.',
+        'El cambio comienza en el momento en que tomas la decisión de no tolerar más tu realidad actual. Muchas mujeres experimentan un cambio interno profundo durante la primera semana de aplicar el marco.',
     },
     {
-      question: 'Do I get immediate access after downloading?',
+      question: '¿Tengo acceso inmediato después de descargar?',
       answer:
-        'Yes. As soon as you complete your purchase, you will receive an email with instant access to the digital guide so you can begin immediately.',
+        'Sí. Tan pronto como completes tu compra, recibirás un correo electrónico con acceso instantáneo a la guía digital para que puedas comenzar de inmediato.',
     },
   ];
 
@@ -33,10 +33,10 @@ export function FAQ() {
       <div className='max-w-3xl mx-auto px-6'>
         <div className='text-center mb-16'>
           <h2 className='font-serif text-4xl sm:text-5xl font-medium tracking-tight text-burgundy'>
-            Frequently Asked Questions
+            Preguntas Frecuentes
           </h2>
           <p className='font-serif italic text-3xl text-burgundy mt-4'>
-            Eliminate the doubt.
+            Elimina la duda.
           </p>
         </div>
 

@@ -29,7 +29,6 @@
   --color-charcoal: var(--charcoal);
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-outfit);
-  --font-handwriting: var(--font-playfair);
 }
 
 html[data-scroll-behavior="smooth"] {

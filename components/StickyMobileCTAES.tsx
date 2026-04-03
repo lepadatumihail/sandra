@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export function StickyMobileCTA() {
+export function StickyMobileCTAES() {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -24,11 +24,10 @@ export function StickyMobileCTA() {
   return (
     <div className='fixed bottom-0 left-0 right-0 z-50 md:hidden animate-fade-in-up'>
       <div className='bg-cream border-t border-blush/30 shadow-[0_-10px_40px_rgba(0,0,0,0.15)] px-4 pt-5 pb-5 relative'>
-        {/* Close button */}
         <button
           onClick={() => setIsDismissed(true)}
           className='absolute -top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-burgundy-deep text-cream/80 shadow-md hover:text-cream transition-colors'
-          aria-label='Close'
+          aria-label='Cerrar'
         >
           <svg
             className='w-3.5 h-3.5'
@@ -46,10 +45,10 @@ export function StickyMobileCTA() {
         </button>
 
         <p className='text-center font-serif italic text-2xl text-burgundy mb-1.5'>
-          Learn to move &amp; act based on your cycle
+          Aprende a moverte y actuar seg&uacute;n tu ciclo
         </p>
         <p className='text-center text-[10px] text-charcoal/50 uppercase tracking-widest font-sans mb-3'>
-          Free download &bull; Instant access
+          Descarga gratuita &bull; Acceso instant&aacute;neo
         </p>
 
         <a
@@ -57,9 +56,9 @@ export function StickyMobileCTA() {
           download='Becoming_Her_Feminine_Cycle_Decision_System.pdf'
           target='_blank'
           rel='noopener noreferrer'
-          className='w-full flex items-center justify-center px-4 py-3.5 text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-[0.1em] sm:tracking-[0.15em] text-cream bg-burgundy shadow-lg active:scale-[0.98] transition-transform text-center rounded-sm'
+          className='w-full flex items-center justify-center px-4 py-3.5 text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-widest sm:tracking-[0.15em] text-cream bg-burgundy shadow-lg active:scale-[0.98] transition-transform text-center rounded-sm'
         >
-          <span>Get Free Feminine Cycle Decision System</span>
+          <span>Descargar Gu&iacute;a Gratis</span>
           <span className='ml-2 shrink-0'>&rarr;</span>
         </a>
       </div>

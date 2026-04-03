@@ -1,22 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedImagineSection } from '@/components/AnimatedImagineSection';
-import { Polaroid } from '@/components/Polaroid';
 import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
 import { StickyMobileCTA } from '@/components/StickyMobileCTA';
-
-function Divider() {
-  return (
-    <div className='flex items-center justify-center py-2'>
-      <div className='w-16 h-px bg-linear-to-r from-transparent via-blush to-transparent' />
-    </div>
-  );
-}
+import { HandwrittenTitle } from '@/components/HandwrittenTitle';
 
 function CTAButton({
   className = '',
-  text = "Get Free Feminine Cycle Decision System",
+  text = 'Get Free Cycle Decision System',
 }: {
   className?: string;
   text?: string;
@@ -124,24 +116,14 @@ export default function Home() {
           sizes='100vw'
           className='object-cover object-center'
         />
-        <div className='absolute inset-0 bg-linear-to-b from-burgundy/70 via-rose/30 to-burgundy-deep/95 mix-blend-multiply' />
-        <div className='absolute top-1/4 -left-1/4 w-96 h-96 bg-blush/30 rounded-full blur-[120px] mix-blend-screen animate-pulse pointer-events-none' />
-        <div className='absolute bottom-1/4 -right-1/4 w-[30rem] h-[30rem] bg-rose/20 rounded-full blur-[120px] mix-blend-screen animate-pulse animate-delay-300 pointer-events-none' />
+        <div className='absolute inset-0 bg-linear-to-b from-burgundy/80 via-burgundy/50 to-burgundy-deep/95' />
 
         <div className='relative z-10 flex flex-col items-center text-center px-6 py-24 max-w-4xl mx-auto mt-12'>
           <p className='animate-fade-in-up text-blush/90 text-xs sm:text-sm uppercase tracking-[0.35em] font-sans font-medium mb-8'>
             A Proven Method by Sandra Torres
           </p>
 
-          <h1 className='animate-fade-in-up animate-delay-100 font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-medium text-cream leading-[0.95] tracking-tight mb-8 drop-shadow-lg'>
-            Becoming
-            <br />
-            <span className='italic'>Her</span>
-            <span className='text-blush'> Method</span>
-            <span className='text-rose text-3xl sm:text-4xl align-super ml-1'>
-              ™
-            </span>
-          </h1>
+          <HandwrittenTitle />
 
           <div className='animate-fade-in-up animate-delay-200 space-y-3 mb-12'>
             <p className='text-cream/90 font-sans text-lg sm:text-2xl leading-relaxed max-w-2xl font-light'>
@@ -174,12 +156,8 @@ export default function Home() {
       </section>
 
       {/* ── Opening Manifesto ── */}
-      <section className='bg-cream py-20 sm:py-32 relative overflow-hidden'>
-        {/* Dreamy glows */}
-        <div className='absolute top-0 right-0 w-[40rem] h-[40rem] bg-rose/10 rounded-full blur-[100px] mix-blend-multiply pointer-events-none' />
-        <div className='absolute bottom-0 left-0 w-[40rem] h-[40rem] bg-blush/15 rounded-full blur-[100px] mix-blend-multiply pointer-events-none' />
-
-        <div className='relative z-10 max-w-3xl mx-auto px-6 text-center'>
+      <section className='bg-cream py-20 sm:py-32'>
+        <div className='max-w-3xl mx-auto px-6 text-center'>
           <div className='space-y-8 text-charcoal/80 font-sans text-lg sm:text-xl leading-relaxed'>
             <p className='text-burgundy font-serif text-3xl sm:text-4xl lg:text-5xl italic leading-tight font-medium mt-8'>
               You don&apos;t chase the life you want&hellip;
@@ -214,17 +192,14 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div className='w-full lg:w-1/2 flex justify-center relative'>
-            {/* Dreamy glow behind polaroid */}
-            <div className='absolute inset-0 bg-rose/20 rounded-full blur-[100px] mix-blend-multiply' />
-            <div className='w-full max-w-[400px] relative z-10'>
-              <Polaroid
-                src='/sandy/IMG_4324.jpg'
-                alt='Sandra Torres'
-                caption='Your new reality...'
-                rotation='left'
-              />
-            </div>
+          <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[700px] overflow-hidden shadow-2xl'>
+            <Image
+              src='/sandy/IMG_4324.jpg'
+              alt='Sandra Torres'
+              fill
+              sizes='(max-width: 1024px) 100vw, 50vw'
+              className='object-cover object-center hover:scale-105 transition-transform duration-1000'
+            />
           </div>
         </div>
       </section>
@@ -232,11 +207,7 @@ export default function Home() {
       {/* ── Not Just An Ebook ── */}
       <section className='bg-cream py-24 sm:py-32 relative overflow-hidden'>
         <div className='max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center'>
-          
           <div className='w-full lg:w-1/2 relative'>
-            {/* Background glow */}
-            <div className='absolute inset-0 bg-rose/10 rounded-full blur-[80px] mix-blend-multiply' />
-            
             <div className='relative w-full max-w-[420px] mx-auto aspect-[3/4] shadow-2xl rounded-sm overflow-hidden border border-cream-dark z-10 hover:scale-[1.02] transition-transform duration-700'>
               <Image
                 src='/branding/becoming-her-cover.png'
@@ -246,31 +217,17 @@ export default function Home() {
                 className='object-cover'
               />
             </div>
-            
-            {/* Handwritten annotations */}
-            <div className='absolute -right-8 top-1/4 hidden md:flex flex-col items-start rotate-[6deg] z-20'>
-              <span className='font-handwriting text-3xl text-burgundy/80'>Your identity reset</span>
-              <svg className='w-12 h-12 text-rose/60 ml-4 mt-1 -rotate-45' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='1.5' d='M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6' />
-              </svg>
-            </div>
-            
-            <div className='absolute -left-12 bottom-1/4 hidden md:flex flex-col items-end rotate-[-4deg] z-20'>
-              <span className='font-handwriting text-3xl text-burgundy/80'>Step-by-step framework</span>
-              <svg className='w-12 h-12 text-rose/60 mr-4 mt-1 rotate-[135deg] transform scale-x-[-1]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='1.5' d='M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6' />
-              </svg>
-            </div>
           </div>
 
           <div className='w-full lg:w-1/2'>
-            <SectionHeading>This Is Not Just an Ebook.</SectionHeading>
-            <p className='mt-4 font-handwriting text-3xl sm:text-4xl text-rose tracking-wider rotate-[-1deg]'>
+            <SectionHeading>This Is Not Just a Book.</SectionHeading>
+            <p className='mt-4 font-serif text-2xl sm:text-3xl italic text-burgundy/80 leading-relaxed'>
               This is a shift in identity.
             </p>
 
             <p className='mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light'>
-              The Becoming Her Method™ is a step-by-step guide designed to help you:
+              The Becoming Her Method™ is a step-by-step guide designed to help
+              you:
             </p>
 
             <div className='mt-10 space-y-6'>
@@ -281,8 +238,10 @@ export default function Home() {
                 'Develop discipline and standards that elevate your life',
                 'Become magnetic without chasing validation',
               ].map((text, i) => (
-                <div key={i} className='flex gap-5 items-start'>
-                  <span className='mt-1.5 font-handwriting text-3xl text-rose/60 shrink-0'>*</span>
+                <div key={i} className='flex gap-6 items-start'>
+                  <span className='text-rose/50 font-serif text-2xl mt-0.5'>
+                    —
+                  </span>
                   <p className='font-sans text-charcoal/80 text-lg sm:text-xl leading-relaxed font-light'>
                     {text}
                   </p>
@@ -297,7 +256,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-          
         </div>
       </section>
 
@@ -390,16 +348,14 @@ export default function Home() {
       {/* ── Why This Works ── */}
       <section className='bg-cream py-24 sm:py-32'>
         <div className='max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center'>
-          <div className='w-full lg:w-1/2 flex justify-center relative'>
-            <div className='absolute inset-0 bg-blush/20 rounded-full blur-[100px] mix-blend-multiply' />
-            <div className='w-full max-w-[400px] relative z-10'>
-              <Polaroid
-                src='/sandy/IMG_4326.JPG'
-                alt='Sandra Torres'
-                caption='You become her.'
-                rotation='right'
-              />
-            </div>
+          <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[700px] overflow-hidden shadow-2xl'>
+            <Image
+              src='/sandy/IMG_4326.JPG'
+              alt='Sandra Torres'
+              fill
+              sizes='(max-width: 1024px) 100vw, 50vw'
+              className='object-cover object-center'
+            />
           </div>
           <div className='w-full lg:w-1/2 lg:pl-10'>
             <SectionHeading>Why This Works</SectionHeading>

@@ -1,22 +1,22 @@
-export function Testimonials() {
+export function TestimonialsES() {
   const testimonials = [
     {
       quote:
-        "I used to constantly question my worth and chase people who couldn't see it. This method rewired how I see myself. I've never felt so powerful.",
+        'Solía cuestionar constantemente mi valor y perseguir a personas que no podían verlo. Este método reprogramó cómo me veo a mí misma. Nunca me había sentido tan poderosa.',
       author: 'A.',
-      highlight: 'I stopped chasing and started attracting.',
+      highlight: 'Dejé de perseguir y empecé a atraer.',
     },
     {
       quote:
-        "The shift isn't just in my head, it's in how I walk, how I speak, and how people respond to me. I finally feel like the woman I was meant to be.",
+        'El cambio no es solo en mi mente, es en cómo camino, cómo hablo y cómo la gente me responde. Finalmente me siento como la mujer que estaba destinada a ser.',
       author: 'M.',
-      highlight: 'Everything around me changed.',
+      highlight: 'Todo a mi alrededor cambió.',
     },
     {
       quote:
-        "I've read countless self-help books, but this was different. It's not about fixing yourself, it's about stepping into a completely new identity.",
+        'He leído innumerables libros de autoayuda, pero este fue diferente. No se trata de arreglarte, se trata de asumir una identidad completamente nueva.',
       author: 'S.',
-      highlight: "It's an identity shift.",
+      highlight: 'Es un cambio de identidad.',
     },
   ];
 
@@ -25,10 +25,10 @@ export function Testimonials() {
       <div className='max-w-6xl mx-auto px-6'>
         <div className='text-center mb-16 sm:mb-24'>
           <p className='font-serif italic text-3xl text-rose tracking-wider mb-4'>
-            Real transformations
+            Transformaciones reales
           </p>
           <h2 className='font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-burgundy'>
-            Women Who Became Her
+            Mujeres Que Se Convirtieron en Ella
           </h2>
         </div>
 
@@ -49,7 +49,7 @@ export function Testimonials() {
               </div>
 
               <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light mb-8'>
-                "{t.quote}"
+                &ldquo;{t.quote}&rdquo;
               </p>
 
               <div className='flex items-center gap-4 border-t border-blush/10 pt-6'>
@@ -69,7 +69,7 @@ export function Testimonials() {
                     ))}
                   </div>
                   <p className='text-xs uppercase tracking-widest text-charcoal/40 font-sans font-medium'>
-                    Verified
+                    Verificado
                   </p>
                 </div>
               </div>

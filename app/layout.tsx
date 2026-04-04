@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Becoming Her Method™ — by Sandra Torres',
     description:
       'A proven step-by-step method to help you break emotional patterns, build deep self-love, and become the most powerful version of yourself.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     type: 'website',
   },
   twitter: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: 'Becoming Her Method™ — by Sandra Torres',
     description:
       'A proven step-by-step method to help you break emotional patterns, build deep self-love, and become the most powerful version of yourself.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 

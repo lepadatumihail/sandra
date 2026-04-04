@@ -1,30 +1,30 @@
-import type { Metadata } from "next";
-import { Playfair_Display, Outfit } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Playfair_Display, Outfit } from 'next/font/google';
+import './globals.css';
 
 const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-playfair',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-outfit',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://becominghermethod.com"),
-  title: "Becoming Her Method™ — by Sandra Torres",
+  metadataBase: new URL('https://becominghermethod.com'),
+  title: 'Becoming Her Method™ — by Sandra Torres',
   description:
-    "A proven step-by-step method to help you break emotional patterns, build deep self-love, and become the most powerful version of yourself.",
+    'A proven step-by-step method to help you break emotional patterns, build deep self-love, and become the most powerful version of yourself.',
   openGraph: {
-    title: "Becoming Her Method™ — by Sandra Torres",
+    title: 'Becoming Her Method™ — by Sandra Torres',
     description:
-      "A proven step-by-step method to help you break emotional patterns, build deep self-love, and become the most powerful version of yourself.",
-    images: [{ url: "/branding/og-image.png", width: 1200, height: 630 }],
-    type: "website",
+      'A proven step-by-step method to help you break emotional patterns, build deep self-love, and become the most powerful version of yourself.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    type: 'website',
   },
 };
 
@@ -35,11 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      data-scroll-behavior="smooth"
+      lang='en'
+      data-scroll-behavior='smooth'
       className={`${playfair.variable} ${outfit.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className='min-h-full flex flex-col'>{children}</body>
     </html>
   );
 }

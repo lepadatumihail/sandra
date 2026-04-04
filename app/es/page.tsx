@@ -17,9 +17,32 @@ export const metadata: Metadata = {
     title: 'Becoming Her Method™ — por Sandra Torres',
     description:
       'Un método probado paso a paso para ayudarte a romper patrones emocionales, construir amor propio profundo y convertirte en la versión más poderosa de ti misma.',
-    images: [{ url: '/branding/og-image.png', width: 1200, height: 630 }],
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+        alt: 'Becoming Her Method™ — por Sandra Torres',
+      },
+    ],
     type: 'website',
     locale: 'es_ES',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Becoming Her Method™ — por Sandra Torres',
+    description:
+      'Un método probado paso a paso para ayudarte a romper patrones emocionales, construir amor propio profundo y convertirte en la versión más poderosa de ti misma.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+        alt: 'Becoming Her Method™ — por Sandra Torres',
+      },
+    ],
   },
 };
 
@@ -416,14 +439,13 @@ export default function HomeES() {
               Conoce a Sandra
             </h3>
             <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
-              Sandra se fue de casa a los 18 a&ntilde;os, se mud&oacute;
-              sola al Reino Unido y reconstruy&oacute; toda su vida
-              despu&eacute;s de dejar una relaci&oacute;n&mdash;con sus
-              hijos a su lado. Tras a&ntilde;os trabajando con mujeres en
-              diferentes campos, cre&oacute; el Becoming Her
-              Method&trade; para dar a otras mujeres el marco que ella
-              dese&oacute; haber tenido: un camino real de sobrevivir a
-              prosperar.
+              Sandra se fue de casa a los 18 a&ntilde;os, se mud&oacute; sola al
+              Reino Unido y reconstruy&oacute; toda su vida despu&eacute;s de
+              dejar una relaci&oacute;n&mdash;con sus hijos a su lado. Tras
+              a&ntilde;os trabajando con mujeres en diferentes campos,
+              cre&oacute; el Becoming Her Method&trade; para dar a otras mujeres
+              el marco que ella dese&oacute; haber tenido: un camino real de
+              sobrevivir a prosperar.
             </p>
           </div>
         </div>
@@ -578,7 +600,10 @@ export default function HomeES() {
                 ].map((item, i) => (
                   <li key={i} className='flex items-start gap-3'>
                     <span className='mt-1.5 block w-1.5 h-1.5 rounded-full bg-rose shrink-0' />
-                    <span className='font-sans text-charcoal/70 text-base leading-relaxed font-light' dangerouslySetInnerHTML={{ __html: item }} />
+                    <span
+                      className='font-sans text-charcoal/70 text-base leading-relaxed font-light'
+                      dangerouslySetInnerHTML={{ __html: item }}
+                    />
                   </li>
                 ))}
               </ul>

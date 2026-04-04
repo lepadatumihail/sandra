@@ -239,7 +239,7 @@ export default function HomeES() {
           </div>
           <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[600px] overflow-hidden shadow-2xl'>
             <Image
-              src='/sandy/IMG_4324.JPG'
+              src='/sandra/IMG_4324.JPG'
               alt='Sandra Torres'
               fill
               sizes='(max-width: 1024px) 100vw, 50vw'
@@ -302,7 +302,7 @@ export default function HomeES() {
       {/* ── Lo Que Vas a Experimentar ── */}
       <section className='relative py-24  overflow-hidden'>
         <Image
-          src='/sandy/IMG_4337.JPG'
+          src='/sandra/IMG_4328-3.JPG'
           alt='Fondo'
           fill
           className='object-cover object-center'
@@ -389,7 +389,7 @@ export default function HomeES() {
         <div className='max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center'>
           <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[600px] overflow-hidden shadow-2xl'>
             <Image
-              src='/sandy/IMG_4326.JPG'
+              src='/sandra/IMG_4326.JPG'
               alt='Sandra Torres'
               fill
               sizes='(max-width: 1024px) 100vw, 50vw'
@@ -424,7 +424,7 @@ export default function HomeES() {
         <div className='max-w-4xl mx-auto px-6 flex flex-col sm:flex-row gap-12 items-center'>
           <div className='w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-lg shrink-0 border-2 border-blush/30'>
             <Image
-              src='/sandy/IMG_4329.JPG'
+              src='/sandra/IMG_5022.JPG'
               alt='Sandra Torres'
               width={192}
               height={192}

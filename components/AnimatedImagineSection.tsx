@@ -37,7 +37,7 @@ export function AnimatedImagineSection({
           className="relative w-full lg:w-1/2 h-[50vh] lg:h-auto"
         >
           <Image
-            src="/sandy/IMG_4336.JPG"
+            src="/sandra/IMG_4336.JPG"
             alt="Sandra Torres"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

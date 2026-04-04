@@ -201,7 +201,7 @@ export default function Home() {
           </div>
           <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[600px] overflow-hidden shadow-2xl'>
             <Image
-              src='/sandy/IMG_4324.JPG'
+              src='/sandra/IMG_4324.JPG'
               alt='Sandra Torres'
               fill
               sizes='(max-width: 1024px) 100vw, 50vw'
@@ -264,7 +264,7 @@ export default function Home() {
       {/* ── What You Will Experience (Parallax image) ── */}
       <section className='relative py-24  overflow-hidden'>
         <Image
-          src='/sandy/IMG_4337.JPG'
+          src='/sandra/IMG_4328-3.JPG'
           alt='Background'
           fill
           className='object-cover object-center'
@@ -352,7 +352,7 @@ export default function Home() {
         <div className='max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center'>
           <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[600px] overflow-hidden shadow-2xl'>
             <Image
-              src='/sandy/IMG_4326.JPG'
+              src='/sandra/IMG_4326.JPG'
               alt='Sandra Torres'
               fill
               sizes='(max-width: 1024px) 100vw, 50vw'
@@ -387,7 +387,7 @@ export default function Home() {
         <div className='max-w-4xl mx-auto px-6 flex flex-col sm:flex-row gap-12 items-center'>
           <div className='w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg shrink-0 border-2 border-blush/30'>
             <Image
-              src='/sandy/IMG_4329.JPG'
+              src='/sandra/IMG_5022.JPG'
               alt='Sandra Torres'
               width={192}
               height={192}
@@ -402,12 +402,12 @@ export default function Home() {
               Meet Sandra
             </h3>
             <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
-              Sandra left home at 18, moved alone to the UK, and rebuilt
-              her entire life after leaving a relationship&mdash;with her
-              children by her side. After years working with women in
-              different fields, she created the Becoming Her Method&trade;
-              to give other women the framework she wished she&apos;d had:
-              a real path from surviving to thriving.
+              Sandra left home at 18, moved alone to the UK, and rebuilt her
+              entire life after leaving a relationship&mdash;with her children
+              by her side. After years working with women in different fields,
+              she created the Becoming Her Method&trade; to give other women the
+              framework she wished she&apos;d had: a real path from surviving to
+              thriving.
             </p>
           </div>
         </div>

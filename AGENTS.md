@@ -15,7 +15,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 ## Learned Workspace Facts
 
 - Next.js App Router site: English marketing home at `/`, Spanish mirror at `/es` with translated copy and Spanish-specific components (e.g. `TestimonialsES`, `FAQES`, `StickyMobileCTAES`).
-- Promotional photography is under `public/sandy/`.
+- Promotional photography is under `public/sandra/`.
 - Lead magnet file is `public/BECOMING HER (2).pdf`, served as `/BECOMING%20HER%20(2).pdf` (download attribute may use a sanitized filename).
 - Local development targets Node.js 22 (e.g. `nvm use 22`).
 - Body/heading fonts use Google Fonts chosen to approximate a Codec Pro–like pairing after Codec Pro itself was deferred.

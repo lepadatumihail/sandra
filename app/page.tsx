@@ -382,12 +382,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── About Sandra ── */}
+      {/* ── My Story ── */}
       <section className='bg-white py-24'>
         <div className='max-w-4xl mx-auto px-6 flex flex-col sm:flex-row gap-12 items-center'>
-          <div className='w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg shrink-0 border-2 border-blush/30'>
+          <div className='w-40 h-40 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-lg shrink-0 border-2 border-blush/30'>
             <Image
-              src='/sandra/IMG_4329-black.JPG'
+              src='/sandra/IMG_4329-black.jpg'
               alt='Sandra Torres'
               width={192}
               height={192}
@@ -396,18 +396,18 @@ export default function Home() {
           </div>
           <div>
             <p className='text-rose text-xs uppercase tracking-[0.3em] font-sans font-bold mb-3'>
-              About the Author
+              My Story
             </p>
             <h3 className='font-serif text-2xl sm:text-3xl font-medium text-burgundy mb-4'>
-              Meet Sandra
+              I Didn&apos;t Read About Transformation. <br />I Lived It
             </h3>
             <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
-              Sandra left home at 18, moved alone to the UK, and rebuilt her
-              entire life after leaving a relationship&mdash;with her children
-              by her side. After years working with women in different fields,
-              she created the Becoming Her Method&trade; to give other women the
-              framework she wished she&apos;d had: a real path from surviving to
-              thriving.
+              There was a version of me that stayed quiet, played small, and
+              waited for permission to take up space. One day I decided that
+              version of me was done. I chose to rebuild myself, not just my
+              circumstances, but who I was at my core. I rewired how I thought,
+              how I showed up, and how I treated myself. That process became the
+              Becoming Her Method&trade;, and it changed everything.
             </p>
           </div>
         </div>

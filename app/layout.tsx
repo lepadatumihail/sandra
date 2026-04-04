@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://becominghermethod.com'),
+  metadataBase: new URL('https://sandra-omega.vercel.app'),
   title: 'Becoming Her Method™ — by Sandra Torres',
   description:
     'A proven step-by-step method to help you break emotional patterns, build deep self-love, and become the most powerful version of yourself.',

@@ -21,7 +21,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section className='bg-cream py-24 sm:py-32'>
+    <section className='bg-cream py-24 sm:py-24'>
       <div className='max-w-6xl mx-auto px-6'>
         <div className='text-center mb-16 sm:mb-24'>
           <p className='font-serif italic text-3xl text-rose tracking-wider mb-4'>
@@ -49,7 +49,7 @@ export function Testimonials() {
               </div>
 
               <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light mb-8'>
-                "{t.quote}"
+                &ldquo;{t.quote}&rdquo;
               </p>
 
               <div className='flex items-center gap-4 border-t border-blush/10 pt-6'>

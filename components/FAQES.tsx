@@ -22,14 +22,19 @@ export function FAQES() {
         'El cambio comienza en el momento en que tomas la decisión de no tolerar más tu realidad actual. Muchas mujeres experimentan un cambio interno profundo durante la primera semana de aplicar el marco.',
     },
     {
-      question: '¿Tengo acceso inmediato después de descargar?',
+      question: '¿Qué recibo después de comprar?',
       answer:
-        'Sí. Tan pronto como completes tu compra, recibirás un correo electrónico con acceso instantáneo a la guía digital para que puedas comenzar de inmediato.',
+        'Recibes una descarga digital instantánea a través de Lemon Squeezy — una guía de 40 páginas con 5 módulos profundos, hojas de trabajo interactivas para cada fase, y el Sistema de Decisiones del Ciclo Femenino como bonus. Todo llega a tu correo inmediatamente después de la compra.',
+    },
+    {
+      question: '¿Hay una vista previa gratuita?',
+      answer:
+        'Sí. Baja a la sección de Guías Gratis para descargar el Módulo 1: Reinicio de Identidad y el Sistema de Decisiones del Ciclo Femenino — ambos completamente gratis. Te darán una muestra real del método antes de comprometerte.',
     },
   ];
 
   return (
-    <section className='bg-cream-dark py-24 sm:py-32'>
+    <section className='bg-cream-dark py-24 sm:py-24'>
       <div className='max-w-3xl mx-auto px-6'>
         <div className='text-center mb-16'>
           <h2 className='font-serif text-4xl sm:text-5xl font-medium tracking-tight text-burgundy'>

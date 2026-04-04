@@ -41,7 +41,7 @@ export function AnimatedImagineSection({
             alt="Sandra Torres"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-linear-to-r from-transparent to-burgundy-deep/30 hidden lg:block" />
           <div className="absolute inset-0 bg-linear-to-b from-transparent to-burgundy-deep/40 lg:hidden" />

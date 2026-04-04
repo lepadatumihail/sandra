@@ -6,18 +6,18 @@ import { FAQ } from '@/components/FAQ';
 import { StickyMobileCTA } from '@/components/StickyMobileCTA';
 import { HandwrittenTitle } from '@/components/HandwrittenTitle';
 
+const CHECKOUT_URL = 'https://REPLACE_WITH_LEMONSQUEEZY_URL';
+
 function CTAButton({
   className = '',
-  text = 'Get Free Cycle Decision System',
+  text = 'Start Becoming Her',
 }: {
   className?: string;
   text?: string;
 }) {
   return (
     <a
-      href='/BECOMING%20HER%20(2).pdf'
-      download='Becoming_Her_Feminine_Cycle_Decision_System.pdf'
-      target='_blank'
+      href={CHECKOUT_URL}
       rel='noopener noreferrer'
       className={`
         group relative inline-flex items-center justify-center
@@ -47,7 +47,7 @@ function SectionHeading({
   return (
     <h2
       className={`
-        font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight leading-tight
+        font-serif text-4xl sm:text-5xl md:text-5xl font-medium tracking-tight leading-tight
         ${light ? 'text-cream' : 'text-burgundy'}
       `}
     >
@@ -92,18 +92,25 @@ const phases = [
 export default function Home() {
   return (
     <main>
-      <header className='absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-12 py-8'>
-        <div className='font-serif text-xl sm:text-2xl text-cream italic tracking-wide'>
-          Sandra Torres
-        </div>
-        <div className='flex items-center gap-6 font-sans text-sm font-semibold tracking-[0.2em] uppercase text-cream'>
-          <Link
-            href='/es'
-            className='text-cream/60 hover:text-cream transition-colors'
-          >
-            ES
-          </Link>
-        </div>
+      <div className='fixed top-0 left-0 right-0 z-[60] bg-burgundy-deep/95 backdrop-blur-sm'>
+        <a
+          href='#free-guides'
+          className='flex items-center justify-center gap-2 py-2.5 text-[11px] sm:text-xs font-sans font-semibold uppercase tracking-[0.2em] text-cream/90 hover:text-cream transition-colors'
+        >
+          <span>&darr;</span>
+          <span>Check Free Guides</span>
+          <span>&darr;</span>
+        </a>
+      </div>
+
+      <header className='absolute top-10 left-0 right-0 z-50 flex items-center justify-end px-6 sm:px-12 py-8'>
+        <Link
+          href='/es'
+          className='inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cream/30 bg-cream/10 backdrop-blur-sm text-cream/80 hover:text-cream hover:bg-cream/20 hover:border-cream/50 transition-all duration-300 text-sm font-sans font-medium tracking-wide'
+        >
+          <span className='text-base leading-none'>&#127466;&#127480;</span>
+          <span>Espa&ntilde;ol</span>
+        </Link>
       </header>
 
       {/* ── Hero ── */}
@@ -116,7 +123,7 @@ export default function Home() {
           sizes='100vw'
           className='object-cover object-center'
         />
-        <div className='absolute inset-0 bg-linear-to-b from-burgundy/80 via-burgundy/50 to-burgundy-deep/95' />
+        <div className='absolute inset-0 bg-linear-to-b from-burgundy/80 via-burgundy/50 to-burgundy-deep/95 opacity-90' />
 
         <div className='relative z-10 flex flex-col items-center text-center px-6 py-24 max-w-4xl mx-auto mt-12'>
           <p className='animate-fade-in-up text-blush/90 text-xs sm:text-sm uppercase tracking-[0.35em] font-sans font-medium mb-8'>
@@ -156,9 +163,9 @@ export default function Home() {
       </section>
 
       {/* ── Opening Manifesto ── */}
-      <section className='bg-cream py-20 sm:py-32'>
-        <div className='max-w-3xl mx-auto px-6 text-center'>
-          <div className='space-y-8 text-charcoal/80 font-sans text-lg sm:text-xl leading-relaxed'>
+      <section className='bg-cream py-20 sm:py-24'>
+        <div className='max-w-5xl mx-auto px-6 text-center'>
+          <div className=' text-charcoal/80 font-sans text-lg sm:text-xl leading-relaxed'>
             <p className='text-burgundy font-serif text-3xl sm:text-4xl lg:text-5xl italic leading-tight font-medium mt-8'>
               You don&apos;t chase the life you want&hellip;
               <br />
@@ -171,7 +178,7 @@ export default function Home() {
       </section>
 
       {/* ── This Is For You If… ── */}
-      <section className='bg-ivory py-24 sm:py-32'>
+      <section className='bg-ivory py-24 sm:py-24'>
         <div className='max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center'>
           <div className='w-full lg:w-1/2'>
             <SectionHeading>This Is For You If&hellip;</SectionHeading>
@@ -192,7 +199,7 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[700px] overflow-hidden shadow-2xl'>
+          <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[600px] overflow-hidden shadow-2xl'>
             <Image
               src='/sandy/IMG_4324.jpg'
               alt='Sandra Torres'
@@ -205,7 +212,7 @@ export default function Home() {
       </section>
 
       {/* ── Not Just An Ebook ── */}
-      <section className='bg-cream py-24 sm:py-32 relative overflow-hidden'>
+      <section className='bg-cream py-24 sm:py-24 relative overflow-hidden'>
         <div className='max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center'>
           <div className='w-full lg:w-1/2 relative'>
             <div className='relative w-full max-w-[420px] mx-auto aspect-[3/4] shadow-2xl rounded-sm overflow-hidden border border-cream-dark z-10 hover:scale-[1.02] transition-transform duration-700'>
@@ -225,18 +232,13 @@ export default function Home() {
               This is a shift in identity.
             </p>
 
-            <p className='mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light'>
-              The Becoming Her Method™ is a step-by-step guide designed to help
-              you:
-            </p>
-
-            <div className='mt-10 space-y-6'>
+            <div className='mt-5 space-y-6'>
               {[
-                'Break emotional patterns that keep you stuck',
-                'Reprogram the beliefs that limit your growth',
-                'Build deep self-love and unshakable self-respect',
-                'Develop discipline and standards that elevate your life',
-                'Become magnetic without chasing validation',
+                '5 deep modules with guided worksheets to apply each phase',
+                'Identity-based exercises that rewire how you think and act',
+                'Heal emotional patterns and reprogram limiting beliefs',
+                'Build unshakable self-respect, standards, and boundaries',
+                'A self-trust contract you sign with yourself',
               ].map((text, i) => (
                 <div key={i} className='flex gap-6 items-start'>
                   <span className='text-rose/50 font-serif text-2xl mt-0.5'>
@@ -249,8 +251,8 @@ export default function Home() {
               ))}
             </div>
 
-            <div className='mt-12 p-8 bg-white rounded-2xl shadow-sm border border-blush/20'>
-              <p className='font-serif text-2xl sm:text-3xl text-burgundy leading-relaxed italic'>
+            <div className='mt-4 p-8 bg-white rounded-2xl shadow-sm border border-blush/20'>
+              <p className='font-serif text-xl text-burgundy leading-relaxed italic'>
                 This is about becoming a woman who doesn&apos;t settle,
                 doesn&apos;t chase, and doesn&apos;t lose herself.
               </p>
@@ -260,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* ── What You Will Experience (Parallax image) ── */}
-      <section className='relative py-32 sm:py-48 overflow-hidden'>
+      <section className='relative py-24  overflow-hidden'>
         <Image
           src='/sandy/IMG_4337.jpg'
           alt='Background'
@@ -311,9 +313,9 @@ export default function Home() {
       </section>
 
       {/* ── The Method (Phases) ── */}
-      <section className='bg-ivory py-24 sm:py-32'>
+      <section className='bg-ivory py-24'>
         <div className='max-w-4xl mx-auto px-6'>
-          <div className='text-center mb-20'>
+          <div className='text-center mb-10'>
             <p className='text-rose text-xs sm:text-sm uppercase tracking-[0.3em] font-sans font-bold mb-4'>
               The 5 Phases
             </p>
@@ -346,9 +348,9 @@ export default function Home() {
       </section>
 
       {/* ── Why This Works ── */}
-      <section className='bg-cream py-24 sm:py-32'>
+      <section className='bg-cream py-24'>
         <div className='max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center'>
-          <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[700px] overflow-hidden shadow-2xl'>
+          <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[600px] overflow-hidden shadow-2xl'>
             <Image
               src='/sandy/IMG_4326.JPG'
               alt='Sandra Torres'
@@ -376,6 +378,37 @@ export default function Home() {
                 your entire life shifts.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── About Sandra ── */}
+      <section className='bg-white py-24'>
+        <div className='max-w-4xl mx-auto px-6 flex flex-col sm:flex-row gap-12 items-center'>
+          <div className='w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg shrink-0 border-2 border-blush/30'>
+            <Image
+              src='/sandy/IMG_4329.jpg'
+              alt='Sandra Torres'
+              width={192}
+              height={192}
+              className='object-cover w-full h-full'
+            />
+          </div>
+          <div>
+            <p className='text-rose text-xs uppercase tracking-[0.3em] font-sans font-bold mb-3'>
+              About the Author
+            </p>
+            <h3 className='font-serif text-2xl sm:text-3xl font-medium text-burgundy mb-4'>
+              Meet Sandra
+            </h3>
+            <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
+              Sandra left home at 18, moved alone to the UK, and rebuilt
+              her entire life after leaving a relationship&mdash;with her
+              children by her side. After years working with women in
+              different fields, she created the Becoming Her Method&trade;
+              to give other women the framework she wished she&apos;d had:
+              a real path from surviving to thriving.
+            </p>
           </div>
         </div>
       </section>
@@ -410,18 +443,77 @@ export default function Home() {
         }
       />
 
+      {/* ── Free Guides ── */}
+      <section id='free-guides' className='bg-cream py-24'>
+        <div className='max-w-5xl mx-auto px-6'>
+          <div className='text-center mb-16'>
+            <p className='text-rose text-xs sm:text-sm uppercase tracking-[0.3em] font-sans font-bold mb-4'>
+              Free Resources
+            </p>
+            <SectionHeading>Free Guides</SectionHeading>
+            <p className='mt-6 font-sans text-charcoal/60 text-lg sm:text-xl leading-relaxed font-light max-w-2xl mx-auto'>
+              Start your journey with these free resources &mdash; a preview of
+              what the full method offers.
+            </p>
+          </div>
+
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div className='bg-white rounded-2xl border border-blush/20 p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col'>
+              <p className='text-rose text-xs uppercase tracking-[0.25em] font-sans font-bold mb-3'>
+                Preview
+              </p>
+              <h3 className='font-serif text-2xl sm:text-3xl font-medium text-burgundy mb-3'>
+                Module 1: Identity Reset
+              </h3>
+              <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light mb-8 flex-1'>
+                The first step of the Becoming Her Method&trade;. Define who you
+                are becoming and begin shifting from your past version into your
+                future self.
+              </p>
+              <a
+                href='/becoming-her-module-1.pdf'
+                download='Becoming_Her_Module_1.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
+              >
+                <span>Download Free PDF</span>
+                <span className='ml-2 shrink-0'>&darr;</span>
+              </a>
+            </div>
+
+            <div className='bg-white rounded-2xl border border-blush/20 p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col'>
+              <p className='text-rose text-xs uppercase tracking-[0.25em] font-sans font-bold mb-3'>
+                Free Guide
+              </p>
+              <h3 className='font-serif text-2xl sm:text-3xl font-medium text-burgundy mb-3'>
+                Feminine Cycle Decision System
+              </h3>
+              <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light mb-8 flex-1'>
+                Learn to move and act in alignment with your cycle. Understand
+                your energy phases so you can make better decisions
+                effortlessly.
+              </p>
+              <a
+                href='/feminine-cycle.pdf'
+                download='Feminine_Cycle_Decision_System.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
+              >
+                <span>Download Free PDF</span>
+                <span className='ml-2 shrink-0'>&darr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Turning Point & Become Her ── */}
-      <section className='bg-ivory py-24 sm:py-32'>
+      <section className='bg-ivory py-24'>
         <div className='max-w-5xl mx-auto px-6'>
           <div className='text-center mb-20'>
             <SectionHeading>This Is Your Turning Point</SectionHeading>
-
-            <div className='mt-10 space-y-4 font-sans text-xl text-charcoal/70 leading-relaxed font-light'>
-              <p>You can stay where you are&hellip;</p>
-              <p className='text-burgundy font-medium text-2xl'>
-                or you can decide that this is the moment everything changes.
-              </p>
-            </div>
 
             <div className='mt-16 flex flex-col items-center gap-4'>
               <p className='font-sans text-charcoal/50 text-lg tracking-[0.2em] uppercase'>
@@ -436,7 +528,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mt-32 flex flex-col md:flex-row items-center gap-12 md:gap-20 bg-white p-8 sm:p-12 lg:p-16 rounded-3xl shadow-xl border border-blush/20'>
+          <div className='mt-20 flex flex-col md:flex-row items-center gap-12 md:gap-20 bg-white p-8 sm:p-12 lg:p-16 rounded-3xl shadow-xl border border-blush/20'>
             <div className='w-full md:w-1/2 flex justify-center'>
               <div className='relative w-full max-w-[420px] aspect-3/4 shadow-2xl rounded-sm overflow-hidden'>
                 <Image
@@ -456,14 +548,29 @@ export default function Home() {
                 <span className='italic text-rose'>Her.</span>
               </h2>
 
-              <p className='mt-8 font-sans text-charcoal/70 text-xl leading-relaxed font-light'>
+              <p className='mt-8 font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
                 Start your transformation now.
-                <br />
-                Access the Becoming Her Method™ today.
               </p>
 
-              <div className='mt-10'>
-                <CTAButton />
+              <ul className='mt-6 space-y-3'>
+                {[
+                  '40-page digital guide',
+                  '5 deep-dive modules',
+                  'Interactive worksheets with every module',
+                  "Sandra's personal story & framework",
+                  'Feminine Cycle Decision System (bonus)',
+                ].map((item, i) => (
+                  <li key={i} className='flex items-start gap-3'>
+                    <span className='mt-1.5 block w-1.5 h-1.5 rounded-full bg-rose shrink-0' />
+                    <span className='font-sans text-charcoal/70 text-base leading-relaxed font-light'>
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className='mt-8'>
+                <CTAButton text='Ready to Become Her?' />
               </div>
             </div>
           </div>

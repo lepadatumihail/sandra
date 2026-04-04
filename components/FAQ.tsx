@@ -22,14 +22,19 @@ export function FAQ() {
         'The shift begins the moment you make the decision to no longer tolerate your current reality. Many women experience a profound internal shift within the first week of applying the framework.',
     },
     {
-      question: 'Do I get immediate access after downloading?',
+      question: 'What do I get after purchasing?',
       answer:
-        'Yes. As soon as you complete your purchase, you will receive an email with instant access to the digital guide so you can begin immediately.',
+        'You get an instant digital download via Lemon Squeezy — a 40-page guide with 5 deep-dive modules, interactive worksheets for every phase, and the Feminine Cycle Decision System as a bonus. Everything arrives in your inbox immediately after purchase.',
+    },
+    {
+      question: 'Is there a free preview?',
+      answer:
+        'Yes! Scroll to the Free Guides section to download Module 1: Identity Reset and the Feminine Cycle Decision System — both completely free. They\'ll give you a real taste of the method before you commit.',
     },
   ];
 
   return (
-    <section className='bg-cream-dark py-24 sm:py-32'>
+    <section className='bg-cream-dark py-24 sm:py-24'>
       <div className='max-w-3xl mx-auto px-6'>
         <div className='text-center mb-16'>
           <h2 className='font-serif text-4xl sm:text-5xl font-medium tracking-tight text-burgundy'>

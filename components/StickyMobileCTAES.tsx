@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
+const CHECKOUT_URL = 'https://REPLACE_WITH_LEMONSQUEEZY_URL';
+
 export function StickyMobileCTAES() {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
@@ -45,20 +47,18 @@ export function StickyMobileCTAES() {
         </button>
 
         <p className='text-center font-serif italic text-2xl text-burgundy mb-1.5'>
-          Aprende a moverte y actuar seg&uacute;n tu ciclo
+          &iquest;Lista para transformar tu vida?
         </p>
         <p className='text-center text-[10px] text-charcoal/50 uppercase tracking-widest font-sans mb-3'>
-          Descarga gratuita &bull; Acceso instant&aacute;neo
+          El m&eacute;todo completo
         </p>
 
         <a
-          href='/BECOMING%20HER%20(2).pdf'
-          download='Becoming_Her_Feminine_Cycle_Decision_System.pdf'
-          target='_blank'
+          href={CHECKOUT_URL}
           rel='noopener noreferrer'
           className='w-full flex items-center justify-center px-4 py-3.5 text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-widest sm:tracking-[0.15em] text-cream bg-burgundy shadow-lg active:scale-[0.98] transition-transform text-center rounded-sm'
         >
-          <span>Descargar Gu&iacute;a Gratis</span>
+          <span>Empieza a Convertirte en Ella</span>
           <span className='ml-2 shrink-0'>&rarr;</span>
         </a>
       </div>

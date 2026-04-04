@@ -25,8 +25,8 @@ export function HandwrittenTitle() {
   }, []);
 
   return (
-    <div ref={containerRef} className='mb-8 drop-shadow-lg overflow-hidden'>
-      <h1 className='font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-medium text-cream leading-[0.95] tracking-tight'>
+    <div ref={containerRef} className='mb-8 drop-shadow-lg'>
+      <h1 className='font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-medium text-cream leading-[0.95] tracking-normal'>
         <span
           className='inline-block'
           style={{
@@ -38,7 +38,7 @@ export function HandwrittenTitle() {
           Becoming
         </span>
         <br />
-        <span className='overflow-hidden inline-block'>
+        <span className='overflow-hidden inline-block pr-3'>
           <span
             className='inline-block italic'
             style={{
@@ -59,7 +59,7 @@ export function HandwrittenTitle() {
               transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, opacity 0.8s ease 0.3s',
             }}
           >
-            {' '}Method
+            <span className='inline-block w-3 sm:w-4 md:w-5' />Method
           </span>
         </span>
         <span className='overflow-hidden inline-block'>

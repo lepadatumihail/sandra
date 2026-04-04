@@ -201,7 +201,7 @@ export default function Home() {
           </div>
           <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[600px] overflow-hidden shadow-2xl'>
             <Image
-              src='/sandy/IMG_4324.jpg'
+              src='/sandy/IMG_4324.JPG'
               alt='Sandra Torres'
               fill
               sizes='(max-width: 1024px) 100vw, 50vw'
@@ -264,7 +264,7 @@ export default function Home() {
       {/* ── What You Will Experience (Parallax image) ── */}
       <section className='relative py-24  overflow-hidden'>
         <Image
-          src='/sandy/IMG_4337.jpg'
+          src='/sandy/IMG_4337.JPG'
           alt='Background'
           fill
           className='object-cover object-center'
@@ -387,7 +387,7 @@ export default function Home() {
         <div className='max-w-4xl mx-auto px-6 flex flex-col sm:flex-row gap-12 items-center'>
           <div className='w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg shrink-0 border-2 border-blush/30'>
             <Image
-              src='/sandy/IMG_4329.jpg'
+              src='/sandy/IMG_4329.JPG'
               alt='Sandra Torres'
               width={192}
               height={192}

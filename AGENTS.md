@@ -21,5 +21,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - English free guides: `public/module1-en.pdf`, `public/feminine-en.pdf`, `public/glowup-en.pdf`. Spanish page uses `public/feminine-es.pdf` and `public/glowup-es.pdf`; Module 1 on `/es` links to `module1-en.pdf` until `module1-es.pdf` exists.
 - Local development targets Node.js 22 (e.g. `nvm use 22`).
 - Body/heading fonts use Google Fonts chosen to approximate a Codec Pro–like pairing after Codec Pro itself was deferred.
-- Deployed at `sandra-omega.vercel.app`; `metadataBase` in the root layout uses this domain.
-- Vercel Analytics (`@vercel/analytics/next`) is integrated in the root layout.
+- Production domain `https://www.torresmethod.com`; `metadataBase` in the root layout and sitemap/robots use this URL.
+- Vercel Analytics (`@vercel/analytics/next`) is integrated in the root layout; custom event tracking via `track()` covers CTA clicks, free-guide downloads, and sticky-CTA dismissals.
+- Shared client components: `CTAButton` (`components/CTAButton.tsx`) and `TrackedDownloadLink` (`components/TrackedDownloadLink.tsx`) wrap primary CTA and guide download links with built-in Vercel Analytics tracking.

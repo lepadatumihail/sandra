@@ -6,7 +6,8 @@ import { FAQ } from '@/components/FAQ';
 import { StickyMobileCTA } from '@/components/StickyMobileCTA';
 import { HandwrittenTitle } from '@/components/HandwrittenTitle';
 
-const CHECKOUT_URL = 'https://REPLACE_WITH_LEMONSQUEEZY_URL';
+const FULL_BOOK_PDF_HREF = '/becoming-her-english-full-book.pdf';
+const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Full_Book.pdf';
 
 function CTAButton({
   className = '',
@@ -17,7 +18,9 @@ function CTAButton({
 }) {
   return (
     <a
-      href={CHECKOUT_URL}
+      href={FULL_BOOK_PDF_HREF}
+      download={FULL_BOOK_DOWNLOAD_NAME}
+      target='_blank'
       rel='noopener noreferrer'
       className={`
         group relative inline-flex items-center justify-center
@@ -121,9 +124,9 @@ export default function Home() {
           fill
           priority
           sizes='100vw'
-          className='object-cover object-center'
+          className='object-cover object-center md:blur-[2px] md:scale-105'
         />
-        <div className='absolute inset-0 bg-linear-to-b from-burgundy/80 via-burgundy/50 to-burgundy-deep/95 opacity-90' />
+        <div className='absolute inset-0 bg-linear-to-b from-burgundy/80 via-burgundy/50 to-burgundy-deep/95 opacity-60' />
 
         <div className='relative z-10 flex flex-col items-center text-center px-6 py-24 max-w-4xl mx-auto mt-12'>
           <p className='animate-fade-in-up text-blush/90 text-xs sm:text-sm uppercase tracking-[0.35em] font-sans font-medium mb-8'>
@@ -132,7 +135,7 @@ export default function Home() {
 
           <HandwrittenTitle />
 
-          <div className='animate-fade-in-up animate-delay-200 space-y-3 mb-12'>
+          <div className='animate-fade-in-up animate-delay-200 space-y-3 mb-20 sm:mb-24'>
             <p className='text-cream/90 font-sans text-lg sm:text-2xl leading-relaxed max-w-2xl font-light'>
               You don&apos;t become her overnight.
               <br />
@@ -140,7 +143,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='animate-fade-in-up animate-delay-300 flex flex-col items-center'>
+          <div className='animate-fade-in-up animate-delay-300 flex flex-col items-center pt-2 sm:pt-4'>
             <CTAButton />
             <div className='mt-6 flex flex-col items-center gap-2'>
               <div className='flex gap-1 text-blush'>
@@ -201,7 +204,7 @@ export default function Home() {
           </div>
           <div className='w-full lg:w-1/2 relative h-[500px] sm:h-[600px] overflow-hidden shadow-2xl'>
             <Image
-              src='/sandra/IMG_4324.JPG'
+              src='/sandra/IMG_4337.JPG'
               alt='Sandra Torres'
               fill
               sizes='(max-width: 1024px) 100vw, 50vw'
@@ -212,8 +215,8 @@ export default function Home() {
       </section>
 
       {/* ── Not Just An Ebook ── */}
-      <section className='bg-cream py-24 sm:py-24 relative overflow-hidden'>
-        <div className='max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center'>
+      <section className='bg-cream py-20 relative overflow-hidden'>
+        <div className='max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center'>
           <div className='w-full lg:w-1/2 relative'>
             <div className='relative w-full max-w-[420px] mx-auto aspect-[3/4] shadow-2xl rounded-sm overflow-hidden border border-cream-dark z-10 hover:scale-[1.02] transition-transform duration-700'>
               <Image
@@ -445,7 +448,7 @@ export default function Home() {
 
       {/* ── Free Guides ── */}
       <section id='free-guides' className='bg-cream py-24'>
-        <div className='max-w-5xl mx-auto px-6'>
+        <div className='max-w-6xl mx-auto px-6'>
           <div className='text-center mb-16'>
             <p className='text-rose text-xs sm:text-sm uppercase tracking-[0.3em] font-sans font-bold mb-4'>
               Free Resources
@@ -457,7 +460,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-8'>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <div className='bg-white rounded-2xl border border-blush/20 p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col'>
               <p className='text-rose text-xs uppercase tracking-[0.25em] font-sans font-bold mb-3'>
                 Preview
@@ -471,7 +474,7 @@ export default function Home() {
                 future self.
               </p>
               <a
-                href='/becoming-her-module-1.pdf'
+                href='/module1-en.pdf'
                 download='Becoming_Her_Module_1.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
@@ -495,8 +498,32 @@ export default function Home() {
                 effortlessly.
               </p>
               <a
-                href='/feminine-cycle.pdf'
+                href='/feminine-en.pdf'
                 download='Feminine_Cycle_Decision_System.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
+              >
+                <span>Download Free PDF</span>
+                <span className='ml-2 shrink-0'>&darr;</span>
+              </a>
+            </div>
+
+            <div className='bg-white rounded-2xl border border-blush/20 p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col md:col-span-2 lg:col-span-1'>
+              <p className='text-rose text-xs uppercase tracking-[0.25em] font-sans font-bold mb-3'>
+                Free Guide
+              </p>
+              <h3 className='font-serif text-2xl sm:text-3xl font-medium text-burgundy mb-3'>
+                Glow Up Guide
+              </h3>
+              <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light mb-8 flex-1'>
+                A straight shot at showing up as the version of you people
+                remember &mdash; energy, presence, and the small shifts that
+                read expensive without the performance.
+              </p>
+              <a
+                href='/glowup-en.pdf'
+                download='Becoming_Her_Glow_Up_Guide.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
@@ -549,7 +576,7 @@ export default function Home() {
               </h2>
 
               <p className='mt-8 font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
-                Start your transformation now.
+                Download the full guide free &mdash; no checkout, no waiting.
               </p>
 
               <ul className='mt-6 space-y-3'>

@@ -17,7 +17,7 @@ export function HandwrittenTitle() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     observer.observe(el);
@@ -32,7 +32,8 @@ export function HandwrittenTitle() {
           style={{
             opacity: animate ? 1 : 0,
             transform: animate ? 'translateY(0)' : 'translateY(100%)',
-            transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease',
+            transition:
+              'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease',
           }}
         >
           Becoming
@@ -44,7 +45,8 @@ export function HandwrittenTitle() {
             style={{
               opacity: animate ? 1 : 0,
               transform: animate ? 'translateY(0)' : 'translateY(100%)',
-              transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, opacity 0.8s ease 0.15s',
+              transition:
+                'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, opacity 0.8s ease 0.15s',
             }}
           >
             Her
@@ -56,22 +58,12 @@ export function HandwrittenTitle() {
             style={{
               opacity: animate ? 1 : 0,
               transform: animate ? 'translateY(0)' : 'translateY(100%)',
-              transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, opacity 0.8s ease 0.3s',
+              transition:
+                'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, opacity 0.8s ease 0.3s',
             }}
           >
-            <span className='inline-block w-3 sm:w-4 md:w-5' />Method
-          </span>
-        </span>
-        <span className='overflow-hidden inline-block'>
-          <span
-            className='inline-block text-rose text-3xl sm:text-4xl align-super ml-1'
-            style={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? 'translateY(0)' : 'translateY(100%)',
-              transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s, opacity 0.8s ease 0.5s',
-            }}
-          >
-            ™
+            <span className='inline-block w-3 sm:w-4 md:w-5' />
+            Method
           </span>
         </span>
       </h1>

@@ -22,14 +22,14 @@ export function FAQ() {
         'The shift begins the moment you make the decision to no longer tolerate your current reality. Many women experience a profound internal shift within the first week of applying the framework.',
     },
     {
-      question: 'What do I get after purchasing?',
+      question: "What's included in the full guide?",
       answer:
-        'You get an instant digital download via Lemon Squeezy — a 40-page guide with 5 deep-dive modules, interactive worksheets for every phase, and the Feminine Cycle Decision System as a bonus. Everything arrives in your inbox immediately after purchase.',
+        'The free PDF is a 40-page guide with 5 deep-dive modules, interactive worksheets for every phase, Sandra\'s story and framework, and the Feminine Cycle Decision System as a bonus. Tap the main CTA to download it instantly.',
     },
     {
       question: 'Is there a free preview?',
       answer:
-        'Yes! Scroll to the Free Guides section to download Module 1: Identity Reset and the Feminine Cycle Decision System — both completely free. They\'ll give you a real taste of the method before you commit.',
+        'Yes. Scroll to the Free Guides section for Module 1: Identity Reset, the Feminine Cycle Decision System, and the Glow Up Guide — all free PDFs so you can feel the method before you go all in.',
     },
   ];
 

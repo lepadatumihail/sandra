@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
-const CHECKOUT_URL = 'https://REPLACE_WITH_LEMONSQUEEZY_URL';
+const FULL_BOOK_PDF_HREF = '/becoming-her-english-full-book.pdf';
+const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Full_Book.pdf';
 
 export function StickyMobileCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -54,7 +55,9 @@ export function StickyMobileCTA() {
         </p>
 
         <a
-          href={CHECKOUT_URL}
+          href={FULL_BOOK_PDF_HREF}
+          download={FULL_BOOK_DOWNLOAD_NAME}
+          target='_blank'
           rel='noopener noreferrer'
           className='w-full flex items-center justify-center px-4 py-3.5 text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-widest sm:tracking-[0.15em] text-cream bg-burgundy shadow-lg active:scale-[0.98] transition-transform text-center rounded-sm'
         >

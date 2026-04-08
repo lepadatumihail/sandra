@@ -22,14 +22,14 @@ export function FAQES() {
         'El cambio comienza en el momento en que tomas la decisión de no tolerar más tu realidad actual. Muchas mujeres experimentan un cambio interno profundo durante la primera semana de aplicar el marco.',
     },
     {
-      question: '¿Qué recibo después de comprar?',
+      question: '¿Qué incluye la guía completa?',
       answer:
-        'Recibes una descarga digital instantánea a través de Lemon Squeezy — una guía de 40 páginas con 5 módulos profundos, hojas de trabajo interactivas para cada fase, y el Sistema de Decisiones del Ciclo Femenino como bonus. Todo llega a tu correo inmediatamente después de la compra.',
+        'El PDF gratuito es una guía de 40 páginas con 5 módulos profundos, hojas de trabajo interactivas para cada fase, la historia y el marco de Sandra, y el Sistema de Decisiones del Ciclo Femenino como bonus. Toca el CTA principal para descargarlo al instante.',
     },
     {
       question: '¿Hay una vista previa gratuita?',
       answer:
-        'Sí. Baja a la sección de Guías Gratis para descargar el Módulo 1: Reinicio de Identidad y el Sistema de Decisiones del Ciclo Femenino — ambos completamente gratis. Te darán una muestra real del método antes de comprometerte.',
+        'Sí. Baja a la sección de Guías Gratis: Módulo 1: Reinicio de Identidad, el Sistema de Decisiones del Ciclo Femenino y la Guía Glow Up — tres PDFs gratis para sentir el método antes de ir a fondo.',
     },
   ];
 

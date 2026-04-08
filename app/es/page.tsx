@@ -7,7 +7,8 @@ import { FAQES } from '@/components/FAQES';
 import { StickyMobileCTAES } from '@/components/StickyMobileCTAES';
 import { HandwrittenTitle } from '@/components/HandwrittenTitle';
 
-const CHECKOUT_URL = 'https://REPLACE_WITH_LEMONSQUEEZY_URL';
+const FULL_BOOK_PDF_HREF = '/becoming-her-english-full-book.pdf';
+const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Full_Book.pdf';
 
 export const metadata: Metadata = {
   title: 'Becoming Her Method™ — por Sandra Torres',
@@ -55,7 +56,9 @@ function CTAButton({
 }) {
   return (
     <a
-      href={CHECKOUT_URL}
+      href={FULL_BOOK_PDF_HREF}
+      download={FULL_BOOK_DOWNLOAD_NAME}
+      target='_blank'
       rel='noopener noreferrer'
       className={`
         group relative inline-flex items-center justify-center
@@ -159,7 +162,7 @@ export default function HomeES() {
           fill
           priority
           sizes='100vw'
-          className='object-cover object-center'
+          className='object-cover object-center md:blur-[2px] md:scale-105'
         />
         <div className='absolute inset-0 bg-linear-to-b from-burgundy/80 via-burgundy/50 to-burgundy-deep/95 opacity-90' />
 
@@ -170,7 +173,7 @@ export default function HomeES() {
 
           <HandwrittenTitle />
 
-          <div className='animate-fade-in-up animate-delay-200 space-y-3 mb-12'>
+          <div className='animate-fade-in-up animate-delay-200 space-y-3 mb-20 sm:mb-24'>
             <p className='text-cream/90 font-sans text-lg sm:text-2xl leading-relaxed max-w-2xl font-light'>
               No te conviertes en ella de la noche a la mañana.
               <br />
@@ -178,7 +181,7 @@ export default function HomeES() {
             </p>
           </div>
 
-          <div className='animate-fade-in-up animate-delay-300 flex flex-col items-center'>
+          <div className='animate-fade-in-up animate-delay-300 flex flex-col items-center pt-2 sm:pt-4'>
             <CTAButton />
             <div className='mt-6 flex flex-col items-center gap-2'>
               <div className='flex gap-1 text-blush'>
@@ -483,7 +486,7 @@ export default function HomeES() {
 
       {/* ── Guías Gratis ── */}
       <section id='free-guides' className='bg-cream py-24'>
-        <div className='max-w-5xl mx-auto px-6'>
+        <div className='max-w-6xl mx-auto px-6'>
           <div className='text-center mb-16'>
             <p className='text-rose text-xs sm:text-sm uppercase tracking-[0.3em] font-sans font-bold mb-4'>
               Recursos Gratuitos
@@ -495,7 +498,7 @@ export default function HomeES() {
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-8'>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <div className='bg-white rounded-2xl border border-blush/20 p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col'>
               <p className='text-rose text-xs uppercase tracking-[0.25em] font-sans font-bold mb-3'>
                 Vista Previa
@@ -506,10 +509,11 @@ export default function HomeES() {
               <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light mb-8 flex-1'>
                 El primer paso del Becoming Her Method&trade;. Define en
                 qui&eacute;n te est&aacute;s convirtiendo y comienza a pasar de
-                tu versi&oacute;n pasada a tu yo futuro.
+                tu versi&oacute;n pasada a tu yo futuro. (PDF en ingl&eacute;s
+                por ahora.)
               </p>
               <a
-                href='/becoming-her-module-1-spanish.pdf'
+                href='/module1-en.pdf'
                 download='Becoming_Her_Module_1.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
@@ -533,8 +537,32 @@ export default function HomeES() {
                 decisiones sin esfuerzo.
               </p>
               <a
-                href='/feminine-cycle.pdf'
-                download='Feminine_Cycle_Decision_System.pdf'
+                href='/feminine-es.pdf'
+                download='Sistema_Decisiones_Ciclo_Femenino.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
+              >
+                <span>Descargar PDF Gratis</span>
+                <span className='ml-2 shrink-0'>&darr;</span>
+              </a>
+            </div>
+
+            <div className='bg-white rounded-2xl border border-blush/20 p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col md:col-span-2 lg:col-span-1'>
+              <p className='text-rose text-xs uppercase tracking-[0.25em] font-sans font-bold mb-3'>
+                Gu&iacute;a Gratis
+              </p>
+              <h3 className='font-serif text-2xl sm:text-3xl font-medium text-burgundy mb-3'>
+                Gu&iacute;a Glow Up
+              </h3>
+              <p className='font-sans text-charcoal/70 text-lg leading-relaxed font-light mb-8 flex-1'>
+                Para mostrarte como la versi&oacute;n de ti que la gente
+                recuerda: energ&iacute;a, presencia, y los peque&ntilde;os
+                cambios que se sienten caros sin postureo.
+              </p>
+              <a
+                href='/glowup-es.pdf'
+                download='Becoming_Her_Glow_Up_Guide_ES.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
@@ -587,7 +615,8 @@ export default function HomeES() {
               </h2>
 
               <p className='mt-8 font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
-                Comienza tu transformaci&oacute;n ahora.
+                Descarga la gu&iacute;a completa gratis &mdash; sin checkout,
+                sin esperas.
               </p>
 
               <ul className='mt-6 space-y-3'>

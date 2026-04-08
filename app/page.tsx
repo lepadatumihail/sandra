@@ -5,40 +5,8 @@ import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
 import { StickyMobileCTA } from '@/components/StickyMobileCTA';
 import { HandwrittenTitle } from '@/components/HandwrittenTitle';
-
-const FULL_BOOK_PDF_HREF = '/becoming-her-english-full-book.pdf';
-const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Full_Book.pdf';
-
-function CTAButton({
-  className = '',
-  text = 'Start Becoming Her',
-}: {
-  className?: string;
-  text?: string;
-}) {
-  return (
-    <a
-      href={FULL_BOOK_PDF_HREF}
-      download={FULL_BOOK_DOWNLOAD_NAME}
-      target='_blank'
-      rel='noopener noreferrer'
-      className={`
-        group relative inline-flex items-center justify-center
-        px-8 sm:px-10 py-4 text-xs sm:text-sm font-sans font-semibold uppercase tracking-[0.15em] sm:tracking-[0.2em]
-        text-burgundy bg-cream shadow-lg
-        transition-all duration-500 ease-out
-        hover:bg-white hover:shadow-xl hover:-translate-y-0.5
-        focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream
-        ${className}
-      `}
-    >
-      <span className='relative z-10 text-center'>{text}</span>
-      <span className='ml-3 relative z-10 transition-transform duration-300 group-hover:translate-x-1 shrink-0'>
-        &rarr;
-      </span>
-    </a>
-  );
-}
+import { CTAButton } from '@/components/CTAButton';
+import { TrackedDownloadLink } from '@/components/TrackedDownloadLink';
 
 function SectionHeading({
   children,
@@ -144,7 +112,7 @@ export default function Home() {
           </div>
 
           <div className='animate-fade-in-up animate-delay-300 flex flex-col items-center pt-2 sm:pt-4'>
-            <CTAButton />
+            <CTAButton location='hero' />
             <div className='mt-6 flex flex-col items-center gap-2'>
               <div className='flex gap-1 text-blush'>
                 {[...Array(5)].map((_, i) => (
@@ -473,16 +441,15 @@ export default function Home() {
                 are becoming and begin shifting from your past version into your
                 future self.
               </p>
-              <a
+              <TrackedDownloadLink
                 href='/module1-en.pdf'
-                download='Becoming_Her_Module_1.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
+                downloadName='Becoming_Her_Module_1.pdf'
+                guide='module1'
                 className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
               >
                 <span>Download Free PDF</span>
                 <span className='ml-2 shrink-0'>&darr;</span>
-              </a>
+              </TrackedDownloadLink>
             </div>
 
             <div className='bg-white rounded-2xl border border-blush/20 p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col'>
@@ -497,16 +464,15 @@ export default function Home() {
                 your energy phases so you can make better decisions
                 effortlessly.
               </p>
-              <a
+              <TrackedDownloadLink
                 href='/feminine-en.pdf'
-                download='Feminine_Cycle_Decision_System.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
+                downloadName='Feminine_Cycle_Decision_System.pdf'
+                guide='feminine_cycle'
                 className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
               >
                 <span>Download Free PDF</span>
                 <span className='ml-2 shrink-0'>&darr;</span>
-              </a>
+              </TrackedDownloadLink>
             </div>
 
             <div className='bg-white rounded-2xl border border-blush/20 p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col md:col-span-2 lg:col-span-1'>
@@ -521,16 +487,15 @@ export default function Home() {
                 remember &mdash; energy, presence, and the small shifts that
                 read expensive without the performance.
               </p>
-              <a
+              <TrackedDownloadLink
                 href='/glowup-en.pdf'
-                download='Becoming_Her_Glow_Up_Guide.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
+                downloadName='Becoming_Her_Glow_Up_Guide.pdf'
+                guide='glow_up'
                 className='inline-flex items-center justify-center px-6 py-3 text-xs font-sans font-semibold uppercase tracking-[0.15em] border-2 border-burgundy/30 text-burgundy bg-transparent hover:bg-burgundy hover:text-cream transition-colors duration-300 rounded-sm'
               >
                 <span>Download Free PDF</span>
                 <span className='ml-2 shrink-0'>&darr;</span>
-              </a>
+              </TrackedDownloadLink>
             </div>
           </div>
         </div>
@@ -597,7 +562,7 @@ export default function Home() {
               </ul>
 
               <div className='mt-8'>
-                <CTAButton text='Ready to Become Her?' />
+                <CTAButton text='Ready to Become Her?' location='turning_point' />
               </div>
             </div>
           </div>

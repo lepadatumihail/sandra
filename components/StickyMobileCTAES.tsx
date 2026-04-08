@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { track } from '@vercel/analytics';
 
 const FULL_BOOK_PDF_HREF = '/becoming-her-english-full-book.pdf';
 const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Full_Book.pdf';
@@ -28,7 +29,10 @@ export function StickyMobileCTAES() {
     <div className='fixed bottom-0 left-0 right-0 z-50 md:hidden animate-fade-in-up'>
       <div className='bg-cream border-t border-blush/30 shadow-[0_-10px_40px_rgba(0,0,0,0.15)] px-4 pt-5 pb-5 relative'>
         <button
-          onClick={() => setIsDismissed(true)}
+          onClick={() => {
+            setIsDismissed(true);
+            track('sticky_cta_dismiss', { locale: 'es' });
+          }}
           className='absolute -top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-burgundy-deep text-cream/80 shadow-md hover:text-cream transition-colors'
           aria-label='Cerrar'
         >
@@ -59,6 +63,7 @@ export function StickyMobileCTAES() {
           download={FULL_BOOK_DOWNLOAD_NAME}
           target='_blank'
           rel='noopener noreferrer'
+          onClick={() => track('cta_click', { location: 'sticky_mobile', locale: 'es' })}
           className='w-full flex items-center justify-center px-4 py-3.5 text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-widest sm:tracking-[0.15em] text-cream bg-burgundy shadow-lg active:scale-[0.98] transition-transform text-center rounded-sm'
         >
           <span>Empieza a Convertirte en Ella</span>

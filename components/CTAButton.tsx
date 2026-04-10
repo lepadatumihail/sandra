@@ -2,8 +2,15 @@
 
 import { track } from '@vercel/analytics';
 
-const FULL_BOOK_PDF_HREF = '/becoming-her-english-full-book.pdf';
-const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Full_Book.pdf';
+const FULL_BOOK_EN = {
+  href: '/becoming-her-english-full-book.pdf',
+  downloadName: 'Becoming_Her_Method_Full_Book.pdf',
+} as const;
+
+const FULL_BOOK_ES = {
+  href: '/becoming-her-spanish.pdf',
+  downloadName: 'Becoming_Her_Method_Libro_Completo.pdf',
+} as const;
 
 export function CTAButton({
   className = '',
@@ -16,10 +23,12 @@ export function CTAButton({
   location: 'hero' | 'turning_point';
   locale?: 'en' | 'es';
 }) {
+  const book = locale === 'es' ? FULL_BOOK_ES : FULL_BOOK_EN;
+
   return (
     <a
-      href={FULL_BOOK_PDF_HREF}
-      download={FULL_BOOK_DOWNLOAD_NAME}
+      href={book.href}
+      download={book.downloadName}
       target='_blank'
       rel='noopener noreferrer'
       onClick={() => track('cta_click', { location, locale })}

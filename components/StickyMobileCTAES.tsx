@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { track } from '@vercel/analytics';
 
-const FULL_BOOK_PDF_HREF = '/becoming-her-english-full-book.pdf';
-const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Full_Book.pdf';
+const FULL_BOOK_PDF_HREF = '/becoming-her-spanish.pdf';
+const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Libro_Completo.pdf';
 
 export function StickyMobileCTAES() {
   const [isVisible, setIsVisible] = useState(false);

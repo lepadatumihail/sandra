@@ -583,8 +583,8 @@ export default function HomeES() {
               </h2>
 
               <p className='mt-8 font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
-                Descarga la gu&iacute;a completa gratis &mdash; sin checkout,
-                sin esperas.
+                El m&eacute;todo completo &mdash; directo a tu correo como PDF
+                en el momento que compras.
               </p>
 
               <ul className='mt-6 space-y-3'>

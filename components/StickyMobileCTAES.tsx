@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { track } from '@vercel/analytics';
-
-const FULL_BOOK_PDF_HREF = '/becoming-her-spanish.pdf';
-const FULL_BOOK_DOWNLOAD_NAME = 'Becoming_Her_Method_Libro_Completo.pdf';
+import { startCheckout } from '@/lib/checkout';
 
 export function StickyMobileCTAES() {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +24,20 @@ export function StickyMobileCTAES() {
   }, []);
 
   if (!isVisible || isDismissed) return null;
+
+  const handleClick = async () => {
+    if (loading) return;
+    setError(false);
+    setLoading(true);
+    track('cta_click', { location: 'sticky_mobile', locale: 'es' });
+    track('checkout_started', { location: 'sticky_mobile', locale: 'es' });
+    try {
+      await startCheckout('es');
+    } catch {
+      setError(true);
+      setLoading(false);
+    }
+  };
 
   return (
     <div className='fixed bottom-0 left-0 right-0 z-50 md:hidden animate-fade-in-up'>
@@ -55,20 +69,28 @@ export function StickyMobileCTAES() {
           &iquest;Lista para transformar tu vida?
         </p>
         <p className='text-center text-[10px] text-charcoal/50 uppercase tracking-widest font-sans mb-3'>
-          El m&eacute;todo completo
+          $19 &middot; El m&eacute;todo completo
         </p>
 
-        <a
-          href={FULL_BOOK_PDF_HREF}
-          download={FULL_BOOK_DOWNLOAD_NAME}
-          target='_blank'
-          rel='noopener noreferrer'
-          onClick={() => track('cta_click', { location: 'sticky_mobile', locale: 'es' })}
-          className='w-full flex items-center justify-center px-4 py-3.5 text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-widest sm:tracking-[0.15em] text-cream bg-burgundy shadow-lg active:scale-[0.98] transition-transform text-center rounded-sm'
+        <button
+          type='button'
+          onClick={handleClick}
+          disabled={loading}
+          aria-busy={loading}
+          className='w-full flex items-center justify-center px-4 py-3.5 text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-widest sm:tracking-[0.15em] text-cream bg-burgundy shadow-lg active:scale-[0.98] transition-transform text-center rounded-sm disabled:opacity-80 disabled:cursor-wait'
         >
-          <span>Empieza a Convertirte en Ella</span>
+          <span>{loading ? 'Redirigiendo…' : 'Empieza a Convertirte en Ella'}</span>
           <span className='ml-2 shrink-0'>&rarr;</span>
-        </a>
+        </button>
+
+        {error && (
+          <p
+            className='mt-2 text-center text-[10px] text-red-600 font-sans'
+            role='alert'
+          >
+            Algo sali&oacute; mal. Intenta de nuevo.
+          </p>
+        )}
       </div>
     </div>
   );

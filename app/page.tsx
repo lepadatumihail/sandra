@@ -541,7 +541,8 @@ export default function Home() {
               </h2>
 
               <p className='mt-8 font-sans text-charcoal/70 text-lg leading-relaxed font-light'>
-                Download the full guide free &mdash; no checkout, no waiting.
+                The complete method &mdash; delivered straight to your inbox as
+                a PDF the moment you buy.
               </p>
 
               <ul className='mt-6 space-y-3'>

@@ -24,7 +24,7 @@ export function FAQES() {
     {
       question: '¿Qué incluye la guía completa?',
       answer:
-        'El PDF gratuito es una guía de 40 páginas con 5 módulos profundos, hojas de trabajo interactivas para cada fase, la historia y el marco de Sandra, y el Sistema de Decisiones del Ciclo Femenino como bonus. Toca el CTA principal para descargarlo al instante.',
+        'El método completo es una guía PDF de 40 páginas con 5 módulos profundos, hojas de trabajo interactivas para cada fase, la historia y el marco de Sandra, y el Sistema de Decisiones del Ciclo Femenino como bonus. Cuesta $19 y te llega directo a tu correo en el momento que compras.',
     },
     {
       question: '¿Hay una vista previa gratuita?',

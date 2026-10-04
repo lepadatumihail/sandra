@@ -1,35 +1,37 @@
 import type { MetadataRoute } from 'next';
-import { guideHref, guides } from '@/lib/guides';
+import type { Locale } from '@/lib/checkout';
+import { GUIDES_HUB_PATH, guideHref, guides } from '@/lib/guides';
+import { HOME_PATH, absoluteUrl } from '@/lib/site';
 
-const baseUrl = 'https://www.torresmethod.com';
+// One entry per language, each listing the full EN/ES pair plus x-default.
+function localized(
+  paths: Record<Locale, string>,
+  priority: number,
+): MetadataRoute.Sitemap {
+  const languages = {
+    en: absoluteUrl(paths.en),
+    es: absoluteUrl(paths.es),
+    'x-default': absoluteUrl(paths.en),
+  };
+
+  return (['en', 'es'] as const).map((locale) => ({
+    url: absoluteUrl(paths[locale]),
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority,
+    alternates: { languages },
+  }));
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/es`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+    ...localized(HOME_PATH, 1),
+    ...localized(GUIDES_HUB_PATH, 0.8),
     ...guides.flatMap((guide) =>
-      (['en', 'es'] as const).map((locale) => ({
-        url: `${baseUrl}${guideHref(guide, locale)}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
-        alternates: {
-          languages: {
-            en: `${baseUrl}${guideHref(guide, 'en')}`,
-            es: `${baseUrl}${guideHref(guide, 'es')}`,
-          },
-        },
-      })),
+      localized(
+        { en: guideHref(guide, 'en'), es: guideHref(guide, 'es') },
+        0.8,
+      ),
     ),
   ];
 }

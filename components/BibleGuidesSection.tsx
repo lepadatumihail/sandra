@@ -38,13 +38,23 @@ const COPY: Record<
   },
 };
 
-export function BibleGuidesSection({ locale }: { locale: Locale }) {
+export function BibleGuidesSection({
+  locale,
+  isPageHeading = false,
+}: {
+  locale: Locale;
+  // On the guides hub this section is the page itself: it carries the h1 and
+  // clears the fixed nav.
+  isPageHeading?: boolean;
+}) {
   const copy = COPY[locale];
+  const Heading = isPageHeading ? 'h1' : 'h2';
+  const CardHeading = isPageHeading ? 'h2' : 'h3';
 
   return (
     <section
       id='bible-guides'
-      className='relative overflow-hidden bg-burgundy-deep py-24'
+      className={`relative overflow-hidden bg-burgundy-deep ${isPageHeading ? 'pt-32 pb-24 sm:pt-40' : 'py-24'}`}
     >
       <div className='absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(174,138,134,0.2),transparent_60%)]' />
 
@@ -53,9 +63,9 @@ export function BibleGuidesSection({ locale }: { locale: Locale }) {
           <p className='text-blush/80 text-xs sm:text-sm uppercase tracking-[0.3em] font-sans font-bold mb-4'>
             {copy.eyebrow}
           </p>
-          <h2 className='font-serif text-4xl sm:text-5xl font-medium tracking-tight leading-tight text-cream'>
+          <Heading className='font-serif text-4xl sm:text-5xl font-medium tracking-tight leading-tight text-cream'>
             {copy.headingLead} <span className='italic text-blush'>{copy.headingAccent}</span>
-          </h2>
+          </Heading>
           <p className='mt-6 font-sans text-cream/70 text-lg sm:text-xl leading-relaxed font-light max-w-2xl mx-auto'>
             {copy.intro}
           </p>
@@ -82,6 +92,7 @@ export function BibleGuidesSection({ locale }: { locale: Locale }) {
                     src={guideCopy.cover}
                     alt=''
                     sizes='(max-width: 640px) 112px, 176px'
+                    eager={isPageHeading}
                     className='drop-shadow-[0_25px_30px_rgba(0,0,0,0.5)]'
                   />
                 </Link>
@@ -90,7 +101,7 @@ export function BibleGuidesSection({ locale }: { locale: Locale }) {
                   <p className='text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-sans font-bold text-guide-accent/70'>
                     {guideCopy.audience}
                   </p>
-                  <h3 className='mt-2 font-serif text-xl sm:text-2xl leading-snug text-cream text-pretty'>
+                  <CardHeading className='mt-2 font-serif text-xl sm:text-2xl leading-snug text-cream text-pretty'>
                     <Link
                       href={href}
                       className='hover:text-guide-accent transition-colors'
@@ -100,7 +111,7 @@ export function BibleGuidesSection({ locale }: { locale: Locale }) {
                         {guideCopy.titleAccent}
                       </span>
                     </Link>
-                  </h3>
+                  </CardHeading>
                   <p className='mt-2 text-[10px] uppercase tracking-wider font-sans text-cream/40'>
                     {copy.pages(guideCopy.pages)}
                   </p>
@@ -111,7 +122,7 @@ export function BibleGuidesSection({ locale }: { locale: Locale }) {
                       downloadName={guideCopy.downloadName}
                       guide={guide.id}
                       locale={locale}
-                      location='home'
+                      location={isPageHeading ? 'hub' : 'home'}
                       className='inline-flex items-center justify-center gap-2 px-5 py-3 text-[11px] font-sans font-semibold uppercase tracking-[0.15em] border border-guide-accent/40 text-cream hover:bg-guide-accent hover:text-guide-deep transition-colors duration-300 rounded-sm'
                     >
                       <span>{copy.download}</span>

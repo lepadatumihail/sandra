@@ -10,44 +10,13 @@ import { CTAButton } from '@/components/CTAButton';
 import { TrackedDownloadLink } from '@/components/TrackedDownloadLink';
 import { SiteNav } from '@/components/SiteNav';
 import { BibleGuidesSection } from '@/components/BibleGuidesSection';
+import { JsonLd } from '@/components/JsonLd';
 import { navGuides } from '@/lib/guides';
+import { homeMetadata } from '@/lib/site';
+import { homeJsonLd } from '@/lib/structured-data';
 
-export const metadata: Metadata = {
-  title: 'Becoming Her Method™ — por Sandra Torres',
-  description:
-    'Un método probado paso a paso para ayudarte a romper patrones emocionales, construir amor propio profundo y convertirte en la versión más poderosa de ti misma.',
-  openGraph: {
-    title: 'Becoming Her Method™ — por Sandra Torres',
-    description:
-      'Un método probado paso a paso para ayudarte a romper patrones emocionales, construir amor propio profundo y convertirte en la versión más poderosa de ti misma.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        type: 'image/png',
-        alt: 'Becoming Her Method™ — por Sandra Torres',
-      },
-    ],
-    type: 'website',
-    locale: 'es_ES',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Becoming Her Method™ — por Sandra Torres',
-    description:
-      'Un método probado paso a paso para ayudarte a romper patrones emocionales, construir amor propio profundo y convertirte en la versión más poderosa de ti misma.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        type: 'image/png',
-        alt: 'Becoming Her Method™ — por Sandra Torres',
-      },
-    ],
-  },
-};
+// Title, description and social image come from the Spanish root layout.
+export const metadata: Metadata = homeMetadata('es');
 
 function SectionHeading({
   children,
@@ -104,6 +73,7 @@ const phases = [
 export default function HomeES() {
   return (
     <main lang='es'>
+      <JsonLd data={homeJsonLd('es')} />
       <SiteNav locale='es' alternateHref='/' guides={navGuides('es')} />
 
       {/* ── Hero ── */}

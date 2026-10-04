@@ -16,7 +16,7 @@ export function TrackedDownloadLink({
   downloadName: string;
   guide: 'module1' | 'feminine_cycle' | 'glow_up' | GuideId;
   locale?: 'en' | 'es';
-  location?: 'hero' | 'inside' | 'closing' | 'sticky' | 'home';
+  location?: 'hero' | 'inside' | 'closing' | 'sticky' | 'home' | 'hub';
   children: React.ReactNode;
   className: string;
 }) {

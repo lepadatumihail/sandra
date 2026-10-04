@@ -1,16 +1,19 @@
 import Link from 'next/link';
 import { GuideBook } from '@/components/GuideBook';
+import { JsonLd } from '@/components/JsonLd';
 import { SiteNav } from '@/components/SiteNav';
 import { StickyGuideCTA } from '@/components/StickyGuideCTA';
 import { TrackedDownloadLink } from '@/components/TrackedDownloadLink';
 import type { Locale } from '@/lib/checkout';
 import {
+  GUIDES_HUB_PATH,
   SERIES,
   guideHref,
   guides,
   navGuides,
   type Guide,
 } from '@/lib/guides';
+import { guideJsonLd } from '@/lib/structured-data';
 
 const UI: Record<
   Locale,
@@ -23,6 +26,7 @@ const UI: Record<
     alsoInside: string;
     moreHeading: string;
     view: string;
+    allGuides: string;
     coverOf: string;
     close: string;
     quoteOpen: string;
@@ -40,6 +44,7 @@ const UI: Record<
     alsoInside: 'Also inside',
     moreHeading: 'More free guides',
     view: 'See the guide',
+    allGuides: 'All free guides',
     coverOf: 'Cover of',
     close: 'Close',
     quoteOpen: '“',
@@ -56,6 +61,7 @@ const UI: Record<
     alsoInside: 'También incluye',
     moreHeading: 'Más guías gratuitas',
     view: 'Ver la guía',
+    allGuides: 'Todas las guías gratuitas',
     coverOf: 'Portada de',
     close: 'Cerrar',
     quoteOpen: '«',
@@ -141,6 +147,7 @@ export function GuideLanding({
 
   return (
     <main lang={locale} data-guide-theme={guide.theme} className='bg-cream'>
+      <JsonLd data={guideJsonLd(guide, locale)} />
       <SiteNav
         locale={locale}
         alternateHref={guideHref(guide, otherLocale)}
@@ -386,6 +393,21 @@ export function GuideLanding({
                 </Link>
               );
             })}
+          </div>
+
+          <div className='mt-12 text-center'>
+            <Link
+              href={GUIDES_HUB_PATH[locale]}
+              className='group inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] font-sans font-semibold text-guide-ink/70 hover:text-guide-ink transition-colors'
+            >
+              {ui.allGuides}
+              <span
+                aria-hidden='true'
+                className='transition-transform duration-300 group-hover:translate-x-1'
+              >
+                &rarr;
+              </span>
+            </Link>
           </div>
         </div>
       </section>

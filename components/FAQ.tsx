@@ -24,7 +24,7 @@ export function FAQ() {
     {
       question: "What's included in the full guide?",
       answer:
-        'The free PDF is a 40-page guide with 5 deep-dive modules, interactive worksheets for every phase, Sandra\'s story and framework, and the Feminine Cycle Decision System as a bonus. Tap the main CTA to download it instantly.',
+        'The full method is a 40-page PDF guide with 5 deep-dive modules, interactive worksheets for every phase, Sandra\'s story and framework, and the Feminine Cycle Decision System as a bonus. It\'s $19, delivered straight to your inbox the moment you buy.',
     },
     {
       question: 'Is there a free preview?',

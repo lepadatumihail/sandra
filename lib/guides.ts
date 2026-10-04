@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/checkout';
+// Relative on purpose: next.config.ts imports this file, and its loader can't
+// resolve `@/` aliases in nested imports.
+import { localeAlternates, siteMetadata } from './site';
 
 export type GuideId =
   | 'bible_becoming_her'
@@ -9,6 +12,8 @@ export type GuideId =
 
 type GuideCopy = {
   slug: string;
+  // The <title>: what people actually search for, kept under ~60 characters.
+  seoTitle: string;
   pdf: string;
   downloadName: string;
   cover: string;
@@ -39,9 +44,27 @@ export const SERIES: Record<Locale, string> = {
   es: 'según la Biblia',
 };
 
-const FREE_GUIDE: Record<Locale, string> = {
-  en: 'Free Guide',
-  es: 'Guía gratuita',
+export const GUIDES_HUB_PATH: Record<Locale, string> = {
+  en: '/guides',
+  es: '/es/guias',
+};
+
+export const GUIDES_HUB_COPY: Record<
+  Locale,
+  { name: string; title: string; description: string }
+> = {
+  en: {
+    name: 'Free Bible Guides',
+    title: 'Free Bible Guides (PDF) — Sandra Torres',
+    description:
+      'Free Bible guides: how to be a godly woman, choose the right man, raise your children and become a godly man. PDF downloads, no sign-up.',
+  },
+  es: {
+    name: 'Guías bíblicas gratis',
+    title: 'Guías bíblicas gratis (PDF) — Sandra Torres',
+    description:
+      'Guías bíblicas gratis: cómo ser una mujer de Dios, elegir al hombre adecuado, criar a tus hijos y ser un hombre de Dios. PDF sin registro.',
+  },
 };
 
 export const guides: Guide[] = [
@@ -50,6 +73,7 @@ export const guides: Guide[] = [
     theme: 'burgundy',
     en: {
       slug: 'becoming-her',
+      seoTitle: 'Becoming Her: How to Be a Godly Woman — Free Bible Guide',
       pdf: '/bible/becoming-her-en.pdf',
       downloadName: 'Becoming_Her_According_to_the_Bible.pdf',
       cover: '/bible/becoming-her-en.png',
@@ -126,6 +150,7 @@ export const guides: Guide[] = [
     },
     es: {
       slug: 'convertirte-en-ella',
+      seoTitle: 'Cómo ser una mujer de Dios — guía bíblica gratis',
       pdf: '/bible/becoming-her-es.pdf',
       downloadName: 'Convirtiendote_en_Ella_Segun_la_Biblia.pdf',
       cover: '/bible/becoming-her-es.png',
@@ -209,6 +234,7 @@ export const guides: Guide[] = [
     theme: 'burgundy',
     en: {
       slug: 'the-right-man',
+      seoTitle: 'How to Choose the Right Man — Free Bible Workbook',
       pdf: '/bible/right-man-en.pdf',
       downloadName: 'The_Right_Man_According_to_the_Bible.pdf',
       cover: '/bible/right-man-en.png',
@@ -267,6 +293,7 @@ export const guides: Guide[] = [
     },
     es: {
       slug: 'el-hombre-adecuado',
+      seoTitle: 'Cómo elegir al hombre adecuado — cuaderno bíblico gratis',
       pdf: '/bible/right-man-es.pdf',
       downloadName: 'El_Hombre_Adecuado_Segun_la_Biblia.pdf',
       cover: '/bible/right-man-es.png',
@@ -331,6 +358,7 @@ export const guides: Guide[] = [
     theme: 'burgundy',
     en: {
       slug: 'raising-children',
+      seoTitle: 'How to Raise Children According to the Bible — Free Guide',
       pdf: '/bible/raising-children-en.pdf',
       downloadName: 'Raising_Children_According_to_the_Bible.pdf',
       cover: '/bible/raising-children-en.png',
@@ -382,6 +410,7 @@ export const guides: Guide[] = [
     },
     es: {
       slug: 'criar-a-tus-hijos',
+      seoTitle: 'Cómo criar a tus hijos según la Biblia — guía gratis',
       pdf: '/bible/raising-children-es.pdf',
       downloadName: 'Como_Criar_a_Tus_Hijos_Segun_la_Biblia.pdf',
       cover: '/bible/raising-children-es.png',
@@ -437,6 +466,7 @@ export const guides: Guide[] = [
     theme: 'navy',
     en: {
       slug: 'becoming-him',
+      seoTitle: 'Becoming Him: How to Be a Godly Man — Free Bible Guide',
       pdf: '/bible/becoming-him-en.pdf',
       downloadName: 'Becoming_Him_According_to_the_Bible.pdf',
       cover: '/bible/becoming-him-en.png',
@@ -518,6 +548,7 @@ export const guides: Guide[] = [
     },
     es: {
       slug: 'convertirte-en-el',
+      seoTitle: 'Cómo ser un hombre de Dios — guía bíblica gratis',
       pdf: '/bible/becoming-him-es.pdf',
       downloadName: 'Convirtiendote_en_El_Segun_la_Biblia.pdf',
       cover: '/bible/becoming-him-es.png',
@@ -605,8 +636,7 @@ export function findGuide(locale: Locale, slug: string) {
 }
 
 export function guideHref(guide: Guide, locale: Locale) {
-  const { slug } = guide[locale];
-  return locale === 'es' ? `/es/guias/${slug}` : `/guides/${slug}`;
+  return `${GUIDES_HUB_PATH[locale]}/${guide[locale].slug}`;
 }
 
 // The slice of guide data the client-side nav needs, so it doesn't bundle all the copy.
@@ -629,21 +659,16 @@ export function guideTitle(guide: Guide, locale: Locale) {
 }
 
 export function guideMetadata(guide: Guide, locale: Locale): Metadata {
-  const title = `${guideTitle(guide, locale)} | ${FREE_GUIDE[locale]}`;
-  const { description } = guide[locale];
+  const { seoTitle: title, description } = guide[locale];
   const url = guideHref(guide, locale);
 
   return {
     title,
     description,
-    alternates: {
-      canonical: url,
-      languages: {
-        en: guideHref(guide, 'en'),
-        es: guideHref(guide, 'es'),
-        'x-default': guideHref(guide, 'en'),
-      },
-    },
+    alternates: localeAlternates(
+      { en: guideHref(guide, 'en'), es: guideHref(guide, 'es') },
+      locale,
+    ),
     openGraph: {
       title,
       description,
@@ -656,5 +681,23 @@ export function guideMetadata(guide: Guide, locale: Locale): Metadata {
       title,
       description,
     },
+  };
+}
+
+export function guidesHubMetadata(locale: Locale): Metadata {
+  const { title, description } = GUIDES_HUB_COPY[locale];
+  const site = siteMetadata(locale);
+
+  return {
+    title,
+    description,
+    alternates: localeAlternates(GUIDES_HUB_PATH, locale),
+    openGraph: {
+      ...site.openGraph,
+      title,
+      description,
+      url: GUIDES_HUB_PATH[locale],
+    },
+    twitter: { ...site.twitter, title, description },
   };
 }

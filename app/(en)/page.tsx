@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedImagineSection } from '@/components/AnimatedImagineSection';
@@ -9,7 +10,12 @@ import { CTAButton } from '@/components/CTAButton';
 import { TrackedDownloadLink } from '@/components/TrackedDownloadLink';
 import { SiteNav } from '@/components/SiteNav';
 import { BibleGuidesSection } from '@/components/BibleGuidesSection';
+import { JsonLd } from '@/components/JsonLd';
 import { navGuides } from '@/lib/guides';
+import { homeMetadata } from '@/lib/site';
+import { homeJsonLd } from '@/lib/structured-data';
+
+export const metadata: Metadata = homeMetadata('en');
 
 function SectionHeading({
   children,
@@ -66,6 +72,7 @@ const phases = [
 export default function Home() {
   return (
     <main>
+      <JsonLd data={homeJsonLd('en')} />
       <SiteNav locale='en' alternateHref='/es' guides={navGuides('en')} />
 
       {/* ── Hero ── */}

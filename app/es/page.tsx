@@ -9,6 +9,7 @@ import { HandwrittenTitle } from '@/components/HandwrittenTitle';
 import { CTAButton } from '@/components/CTAButton';
 import { TrackedDownloadLink } from '@/components/TrackedDownloadLink';
 import { SiteNav } from '@/components/SiteNav';
+import { SiteCredit } from '@/components/SiteCredit';
 import { BibleGuidesSection } from '@/components/BibleGuidesSection';
 import { JsonLd } from '@/components/JsonLd';
 import { navGuides } from '@/lib/guides';
@@ -598,6 +599,7 @@ export default function HomeES() {
             &copy; {new Date().getFullYear()} Becoming Her Method™. Todos los
             derechos reservados.
           </p>
+          <SiteCredit locale='es' />
         </div>
       </footer>
 

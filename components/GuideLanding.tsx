@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { GuideBook } from '@/components/GuideBook';
 import { JsonLd } from '@/components/JsonLd';
 import { SiteNav } from '@/components/SiteNav';
+import { SiteCredit } from '@/components/SiteCredit';
 import { StickyGuideCTA } from '@/components/StickyGuideCTA';
 import { TrackedDownloadLink } from '@/components/TrackedDownloadLink';
 import type { Locale } from '@/lib/checkout';
@@ -441,6 +442,7 @@ export function GuideLanding({
           <p className='font-sans text-[11px] text-cream/30'>
             &copy; {new Date().getFullYear()} Becoming Her Method™. {ui.rights}
           </p>
+          <SiteCredit locale={locale} />
         </div>
       </footer>
 

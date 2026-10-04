@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { BibleGuidesSection } from '@/components/BibleGuidesSection';
 import { JsonLd } from '@/components/JsonLd';
 import { SiteNav } from '@/components/SiteNav';
+import { SiteCredit } from '@/components/SiteCredit';
 import type { Locale } from '@/lib/checkout';
 import { GUIDES_HUB_PATH, navGuides } from '@/lib/guides';
 import { HOME_PATH } from '@/lib/site';
@@ -102,6 +103,7 @@ export function GuidesHub({ locale }: { locale: Locale }) {
           <p className='font-sans text-[11px] text-cream/20'>
             &copy; {new Date().getFullYear()} Becoming Her Method™. {copy.rights}
           </p>
+          <SiteCredit locale={locale} />
         </div>
       </footer>
     </main>

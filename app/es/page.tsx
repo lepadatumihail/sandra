@@ -8,6 +8,9 @@ import { StickyMobileCTAES } from '@/components/StickyMobileCTAES';
 import { HandwrittenTitle } from '@/components/HandwrittenTitle';
 import { CTAButton } from '@/components/CTAButton';
 import { TrackedDownloadLink } from '@/components/TrackedDownloadLink';
+import { SiteNav } from '@/components/SiteNav';
+import { BibleGuidesSection } from '@/components/BibleGuidesSection';
+import { navGuides } from '@/lib/guides';
 
 export const metadata: Metadata = {
   title: 'Becoming Her Method™ — por Sandra Torres',
@@ -101,26 +104,7 @@ const phases = [
 export default function HomeES() {
   return (
     <main lang='es'>
-      <div className='fixed top-0 left-0 right-0 z-[60] bg-burgundy-deep/95 backdrop-blur-sm'>
-        <a
-          href='#free-guides'
-          className='flex items-center justify-center gap-2 py-2.5 text-[11px] sm:text-xs font-sans font-semibold uppercase tracking-[0.2em] text-cream/90 hover:text-cream transition-colors'
-        >
-          <span>&darr;</span>
-          <span>Ver Gu&iacute;as Gratis</span>
-          <span>&darr;</span>
-        </a>
-      </div>
-
-      <header className='absolute top-10 left-0 right-0 z-50 flex items-center justify-end px-6 sm:px-12 py-8'>
-        <Link
-          href='/'
-          className='inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cream/30 bg-cream/10 backdrop-blur-sm text-cream/80 hover:text-cream hover:bg-cream/20 hover:border-cream/50 transition-all duration-300 text-sm font-sans font-medium tracking-wide'
-        >
-          <span className='text-base leading-none'>&#127468;&#127463;</span>
-          <span>English</span>
-        </Link>
-      </header>
+      <SiteNav locale='es' alternateHref='/' guides={navGuides('es')} />
 
       {/* ── Hero ── */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
@@ -321,7 +305,7 @@ export default function HomeES() {
       </section>
 
       {/* ── El Método (Fases) ── */}
-      <section className='bg-ivory py-24'>
+      <section id='method' className='bg-ivory py-24'>
         <div className='max-w-4xl mx-auto px-6'>
           <div className='text-center mb-10'>
             <p className='text-rose text-xs sm:text-sm uppercase tracking-[0.3em] font-sans font-bold mb-4'>
@@ -543,8 +527,11 @@ export default function HomeES() {
         </div>
       </section>
 
+      {/* ── Guías Bíblicas ── */}
+      <BibleGuidesSection locale='es' />
+
       {/* ── Punto de Inflexión ── */}
-      <section className='bg-ivory py-24'>
+      <section id='get-the-method' className='bg-ivory py-24'>
         <div className='max-w-5xl mx-auto px-6'>
           <div className='text-center mb-20'>
             <SectionHeading>Este Es Tu Punto de Inflexión</SectionHeading>

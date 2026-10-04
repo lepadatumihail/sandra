@@ -13,6 +13,29 @@
 
   --background: var(--cream);
   --foreground: var(--charcoal);
+
+  --nav-bg: var(--burgundy-deep);
+  --nav-ink: var(--burgundy);
+}
+
+/* Guide pages: palettes sampled from each PDF cover */
+[data-guide-theme] {
+  --nav-bg: var(--guide-deep);
+  --nav-ink: var(--guide-ink);
+}
+
+[data-guide-theme='burgundy'] {
+  --guide-deep: #2a0c11;
+  --guide-ink: #571a23;
+  --guide-accent: #e7c6c8;
+  --guide-muted: #93636a;
+}
+
+[data-guide-theme='navy'] {
+  --guide-deep: #0b1322;
+  --guide-ink: #121e30;
+  --guide-accent: #cdbca3;
+  --guide-muted: #7f6a50;
 }
 
 @theme inline {
@@ -27,6 +50,12 @@
   --color-cream-dark: var(--cream-dark);
   --color-ivory: var(--ivory);
   --color-charcoal: var(--charcoal);
+  --color-guide-deep: var(--guide-deep);
+  --color-guide-ink: var(--guide-ink);
+  --color-guide-accent: var(--guide-accent);
+  --color-guide-muted: var(--guide-muted);
+  --color-nav: var(--nav-bg);
+  --color-nav-ink: var(--nav-ink);
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-outfit);
 }
